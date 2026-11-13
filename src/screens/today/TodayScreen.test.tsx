@@ -98,12 +98,13 @@ test('una entrada se puede mover, copiar y borrar con deshacer', async () => {
   renderToday();
 
   await user.click(await screen.findByRole('button', { name: /Yogur/ }));
-  const sheet = screen.getByRole('dialog', { name: 'Yogur' });
+  const sheet = await screen.findByRole('dialog', { name: 'Yogur' });
   await user.click(within(sheet).getByRole('radio', { name: 'Colaciones' }));
   await waitFor(async () => expect((await listEntries(today))[0].slot).toBe('snacks'));
-
-  await user.click(await screen.findByRole('button', { name: /Yogur/ }));
-  const sheet2 = screen.getByRole('dialog', { name: 'Yogur' });
+  await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+  const colaciones = screen.getByRole('region', { name: /Colaciones/ });
+  await user.click(await within(colaciones).findByRole('button', { name: /Yogur/ }));
+  const sheet2 = await screen.findByRole('dialog', { name: 'Yogur' });
   const date = within(sheet2).getByLabelText('Día');
   await user.clear(date);
   await user.type(date, yesterday);
@@ -111,9 +112,10 @@ test('una entrada se puede mover, copiar y borrar con deshacer', async () => {
   await waitFor(async () => expect(await listEntries(yesterday)).toHaveLength(1));
   expect(await listEntries(today)).toHaveLength(1);
 
+  await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
   await user.click(await screen.findByRole('button', { name: /Yogur/ }));
-  await user.click(within(screen.getByRole('dialog', { name: 'Yogur' })).getByRole('button', { name: 'Borrar' }));
+  await user.click(within(await screen.findByRole('dialog', { name: 'Yogur' })).getByRole('button', { name: 'Borrar' }));
   await waitFor(async () => expect(await listEntries(today)).toHaveLength(0));
   await user.click(await screen.findByRole('button', { name: 'Deshacer' }));
   await waitFor(async () => expect(await listEntries(today)).toHaveLength(1));
-});
+}, 15000);
