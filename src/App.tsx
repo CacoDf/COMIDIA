@@ -15,6 +15,7 @@ import BarcodeScreen from './screens/add/BarcodeScreen';
 import SavedMealsPicker from './screens/add/SavedMealsPicker';
 import MealsScreen from './screens/meals/MealsScreen';
 import SuggestScreen from './screens/meals/SuggestScreen';
+import ProgressScreen from './screens/progress/ProgressScreen';
 import ReviewScreen from './screens/review/ReviewScreen';
 import { DraftProvider } from './state/DraftContext';
 import './ui/ui.css';
@@ -54,7 +55,7 @@ export function AppRoutes() {
         <Route element={<WithTabBar />}>
           <Route path="/" element={<TodayScreen />} />
           <Route path="/comidas" element={<MealsScreen />} />
-          <Route path="/progreso" element={<Pending title="Progreso" />} />
+          <Route path="/progreso" element={<ProgressScreen />} />
           <Route path="/ajustes" element={<Pending title="Ajustes" />} />
         </Route>
         <Route path="/agregar/:slot" element={<AddMenuScreen />} />

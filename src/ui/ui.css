@@ -246,6 +246,19 @@ button.row:active, a.row:active { background: var(--fill-2); }
 button.row:disabled { color: var(--label-3); cursor: default; }
 button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: var(--label-3); }
 
+/* Gráfico de peso */
+.chart { padding: 12px var(--gutter) 4px; }
+.chart__readout { margin: 0 0 4px; }
+.chart svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.chart__grid { stroke: var(--separator); stroke-width: 0.5; }
+.chart__tick { fill: var(--label-2); font-size: 11px; font-variant-numeric: tabular-nums; }
+.chart__line { fill: none; stroke: var(--tint); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart__dot { fill: var(--tint); stroke: var(--surface); stroke-width: 2; }
+.chart__cross { stroke: var(--label-3); stroke-width: 1; }
+.chart + .field::before { content: ''; position: absolute; top: 0; right: 0; left: var(--gutter); border-top: 0.5px solid var(--separator); }
+.week-nav { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; margin-bottom: 8px; }
+.notice { padding: 14px var(--gutter); }
+
 /* Pasos de preparación */
 .steps { margin: 0; padding: 10px var(--gutter) 10px calc(var(--gutter) + 20px); color: var(--label); }
 .steps li { padding: 3px 0; }
