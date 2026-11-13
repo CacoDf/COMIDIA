@@ -85,9 +85,9 @@ test('el resumen semanal compara el promedio con la meta y navega a semanas ante
   await addEntry({ date: prevMonday, slot: 'lunch', name: 'y', source: 'manual', items: [{ name: 'y', grams: 1, macros: m(2500) }] });
   renderProgress();
   const week = await screen.findByRole('region', { name: /Semana/ });
-  await waitFor(() => expect(week).toHaveTextContent('1.800 de 2.209'));
+  await waitFor(() => expect(week).toHaveTextContent('1.800 / 2.209 kcal'));
   expect(week).toHaveTextContent('1 de 7 días anotados');
   expect(within(week).getByRole('button', { name: 'Semana siguiente' })).toBeDisabled();
   await user.click(within(week).getByRole('button', { name: 'Semana anterior' }));
-  await waitFor(() => expect(week).toHaveTextContent('2.500 de 2.209'));
+  await waitFor(() => expect(week).toHaveTextContent('2.500 / 2.209 kcal'));
 });

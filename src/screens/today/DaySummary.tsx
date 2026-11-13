@@ -26,14 +26,11 @@ function KcalArc({ eaten, target }: { eaten: number; target: number }) {
   const ticks = [(1 - RANGE) * target, (1 + RANGE) * target].map((v) => ({ v, p: pointAt(v / scale) }));
   return (
     <div role="meter" aria-label="Calorías del día" aria-valuemin={0} aria-valuemax={Math.round(target)} aria-valuenow={Math.round(eaten)} className="arc">
-      <svg viewBox={`0 0 ${W} 84`} aria-hidden="true">
+      <svg viewBox={`0 0 ${W} 70`} aria-hidden="true">
         <path d={ARC} pathLength={100} className="arc__track" />
         {fill > 0 && <path d={ARC} pathLength={100} className="arc__fill" strokeDasharray={`${fill} 100`} />}
-        {ticks.map(({ v, p }, i) => (
-          <g key={v}>
-            <line x1={p.x} x2={p.x} y1={p.y - 7} y2={p.y + 7} className="arc__tick" />
-            <text x={i === 0 ? p.x - 3 : p.x + 3} y={p.y + 22} textAnchor={i === 0 ? 'end' : 'start'} className="arc__label">{fmtKcal(v)}</text>
-          </g>
+        {ticks.map(({ v, p }) => (
+          <line key={v} x1={p.x} x2={p.x} y1={p.y - 7} y2={p.y + 7} className="arc__tick" />
         ))}
       </svg>
     </div>
@@ -54,6 +51,9 @@ export function DaySummary({ eaten, target }: { eaten: Macros; target: Macros })
           <KcalArc eaten={eaten.kcal} target={target.kcal} />
           <p className="day__left t-subhead">
             {left >= 0 ? `Te quedan ${fmtKcal(left)} kcal` : `Te pasaste por ${fmtKcal(-left)} kcal`}
+          </p>
+          <p className="day__range t-footnote">
+            Tu rango: {fmtKcal(target.kcal * 0.9)} – {fmtKcal(target.kcal * 1.1)} kcal
           </p>
         </div>
         <div className="day__macros">

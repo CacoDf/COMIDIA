@@ -27,7 +27,7 @@ export default function MealsScreen() {
     >
       <ListSection>
         <ListRow
-          leading={<Sparkles size={22} strokeWidth={1.9} className="c-tint" />}
+          leading={<Sparkles size={22} strokeWidth={1.9} />}
           title="Ideas para comer"
           subtitle="Según lo que te queda hoy"
           chevron

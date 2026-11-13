@@ -9,7 +9,6 @@ import { Sheet } from '../../ui/Sheet';
 import { ListRow, ListSection } from '../../ui/List';
 import { ChoiceList } from '../../ui/ChoiceList';
 import { Field } from '../../ui/Field';
-import { Button } from '../../ui/Button';
 import { useToast } from '../../ui/Toast';
 import { fmtG, fmtKcal, SLOT_LABEL } from '../../ui/labels';
 
@@ -80,9 +79,7 @@ export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose
 
       <ListSection header="Copiar a otro día">
         <Field label="Día" type="date" value={copyDate} onChange={setCopyDate} />
-        <div className="inset" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Button variant="tinted" onClick={copy} disabled={!copyDate}>Copiar</Button>
-        </div>
+        <ListRow tone="action" title="Copiar" onClick={copy} disabled={!copyDate} />
       </ListSection>
 
       <ListSection>

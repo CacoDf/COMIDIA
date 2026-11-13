@@ -4,8 +4,7 @@ import { getProfile, latestWeight, listWeights, setWeight } from '../../db/repo'
 import { todayLocal } from '../../domain/dates';
 import { targetsFor, useTargets } from '../../state/useTargets';
 import { Screen } from '../../ui/Screen';
-import { Button } from '../../ui/Button';
-import { ListSection } from '../../ui/List';
+import { ListRow, ListSection } from '../../ui/List';
 import { NumberField } from '../../ui/Field';
 import { useToast } from '../../ui/Toast';
 import { fmtKcal } from '../../ui/labels';
@@ -56,9 +55,7 @@ export default function ProgressScreen() {
           initial={todays?.kg}
           onValueChange={setKg}
         />
-        <div className="inset" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Button variant="tinted" onClick={register} disabled={kg === null || kg < 30 || kg > 350}>Registrar</Button>
-        </div>
+        <ListRow tone="action" title="Registrar" onClick={register} disabled={kg === null || kg < 30 || kg > 350} />
       </ListSection>
 
       {targets && <WeeklySummary target={targets} />}

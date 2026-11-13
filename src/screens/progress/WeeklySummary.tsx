@@ -46,7 +46,7 @@ export function WeeklySummary({ target }: { target: Macros }) {
             <div key={k} className="row" style={{ display: 'block' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, marginBottom: 6 }}>
                 <span>{MACRO_LABEL[k]}</span>
-                <span className="c-secondary">{daysLogged ? `${fmt(average[k])} de ${fmt(target[k])}${unit}` : '—'}</span>
+                <span className="c-secondary">{daysLogged ? `${fmt(average[k])} / ${fmt(target[k])}${unit}` : '—'}</span>
               </div>
               <ProgressBar value={average[k]} max={target[k]} label={`${MACRO_LABEL[k]} promedio`} color={k} />
             </div>

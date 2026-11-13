@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getProfile, latestWeight, saveProfile } from '../../db/repo';
 import { Screen } from '../../ui/Screen';
-import { Button } from '../../ui/Button';
+import { ListRow, ListSection } from '../../ui/List';
 import { useToast } from '../../ui/Toast';
 import { ProfileForm, draftToProfile, type ProfileDraft } from './ProfileForm';
 import { TargetsCard } from './TargetsCard';
@@ -33,9 +33,9 @@ export default function SettingsScreen() {
       {draft && (
         <>
           <ProfileForm draft={draft} onChange={setDraft} showWeight={false} />
-          <div style={{ margin: '-16px 0 32px', display: 'flex', justifyContent: 'flex-end' }}>
-            <Button variant="tinted" onClick={saveDraft} disabled={!draftToProfile(draft)}>Guardar perfil</Button>
-          </div>
+          <ListSection>
+            <ListRow tone="action" title="Guardar perfil" onClick={saveDraft} disabled={!draftToProfile(draft)} />
+          </ListSection>
         </>
       )}
       <AiSettings />

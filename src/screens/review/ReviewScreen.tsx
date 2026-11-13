@@ -1,6 +1,5 @@
 import { useId, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router';
-import { ChevronRight } from 'lucide-react';
 import { addEntry, saveMeal, updateEntry } from '../../db/repo';
 import { rescaleItem, sumMacros } from '../../domain/macros';
 import { todayLocal } from '../../domain/dates';
@@ -9,7 +8,7 @@ import { AiError, refineEstimate } from '../../services/gemini';
 import { useDraft } from '../../state/DraftContext';
 import { useAi } from '../../state/useAi';
 import { Screen } from '../../ui/Screen';
-import { BarButton, Button } from '../../ui/Button';
+import { BarButton } from '../../ui/Button';
 import { ListRow, ListSection } from '../../ui/List';
 import { Field } from '../../ui/Field';
 import { SegmentedControl } from '../../ui/SegmentedControl';
@@ -20,7 +19,7 @@ import { fmtG, fmtKcal, SLOT_LABEL } from '../../ui/labels';
 import { ItemSheet } from './ItemSheet';
 import { GramsInput } from './GramsInput';
 
-const SHORT_SLOT = { breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena', snacks: 'Colación' } as const;
+const SHORT_SLOT = { breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena', snacks: 'Colaciones' } as const;
 
 export default function ReviewScreen() {
   const navigate = useNavigate();
@@ -84,6 +83,7 @@ export default function ReviewScreen() {
       large={false}
       tabbar={false}
       leading={<BarButton onClick={() => navigate(-1)}>Cancelar</BarButton>}
+      trailing={<BarButton bold onClick={save} disabled={d.items.length === 0 || fixing || saving}>Guardar</BarButton>}
     >
       <div style={{ height: 16 }} />
       <ListSection>
@@ -113,7 +113,6 @@ export default function ReviewScreen() {
                   {fmtKcal(it.macros.kcal)} kcal · P {fmtG(it.macros.protein)} · C {fmtG(it.macros.carbs)} · G {fmtG(it.macros.fat)}
                 </span>
               </span>
-              <ChevronRight className="row__chevron" size={18} strokeWidth={2.5} aria-hidden="true" />
             </button>
             <GramsInput
               grams={it.grams}
@@ -137,12 +136,10 @@ export default function ReviewScreen() {
             value={correction}
             onChange={(e) => setCorrection(e.target.value)}
           />
-          <div className="inset" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 12 }}>
-            {fixError && <span role="alert" className="t-footnote c-danger" style={{ flex: 1 }}>{fixError}</span>}
-            <Button variant="tinted" onClick={fix} disabled={!correction.trim()} loading={fixing}>Corregir</Button>
-          </div>
+          <ListRow tone="action" title={fixing ? 'Corrigiendo…' : 'Corregir'} onClick={fix} disabled={!correction.trim() || fixing} />
         </ListSection>
       )}
+      {fixError && <p role="alert" className="t-subhead c-danger" style={{ margin: '-20px 16px 24px' }}>{fixError}</p>}
 
       <ListSection header="Total">
         <ListRow
@@ -157,7 +154,6 @@ export default function ReviewScreen() {
         </ListSection>
       )}
 
-      <Button size="large" onClick={save} disabled={d.items.length === 0 || fixing} loading={saving}>Guardar</Button>
 
       {editing !== null && d.items[editing] && (
         <ItemSheet

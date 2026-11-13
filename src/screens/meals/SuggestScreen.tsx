@@ -19,7 +19,7 @@ import { aiErrorMessage } from '../../ui/aiErrorMessage';
 import { fmtG, fmtKcal } from '../../ui/labels';
 import { macroLine } from './mealText';
 
-const SHORT = { breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena', snacks: 'Colación' } as const;
+const SHORT = { breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena', snacks: 'Colaciones' } as const;
 
 function slotForNow(h = new Date().getHours()): MealSlot {
   if (h < 11) return 'breakfast';
