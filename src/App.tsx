@@ -3,7 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { getProfile } from './db/repo';
 import { TabBar } from './ui/TabBar';
 import { ToastProvider } from './ui/Toast';
-import LabScreen from './screens/lab/LabScreen';
+import { OfflineBanner } from './ui/OfflineBanner';
 import WelcomeScreen from './screens/welcome/WelcomeScreen';
 import TodayScreen from './screens/today/TodayScreen';
 import AddMenuScreen from './screens/add/AddMenuScreen';
@@ -32,6 +32,7 @@ function WithTabBar() {
   return (
     <>
       <Outlet />
+      <OfflineBanner />
       <TabBar />
     </>
   );
@@ -41,7 +42,6 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="/bienvenida" element={<WelcomeScreen />} />
-      <Route path="/lab" element={<LabScreen />} />
       <Route element={<RequireProfile />}>
         <Route element={<WithTabBar />}>
           <Route path="/" element={<TodayScreen />} />

@@ -378,3 +378,14 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
 }
+
+/* Aviso sin conexión */
+.offline {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 29;
+  bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 8px);
+  display: flex; align-items: center; gap: 6px; max-width: calc(100% - 32px);
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--surface-raised); color: var(--label-2);
+  font-size: 0.706rem; font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
