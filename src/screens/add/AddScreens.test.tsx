@@ -46,9 +46,9 @@ describe('Agregar', () => {
     renderAt('/agregar/lunch');
     expect(await screen.findByRole('heading', { name: 'Agregar a Almuerzo' })).toBeInTheDocument();
     for (const name of [/Buscar/, /Código de barras/, /Mis comidas/]) expect(screen.getByRole('button', { name })).toBeEnabled();
-    await waitFor(() => expect(screen.getByRole('button', { name: /Escribir/ })).toBeDisabled());
+    expect(await screen.findByText(/key de Gemini en Ajustes/)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Escribir/ })).toBeDisabled();
     expect(screen.getByRole('button', { name: /Foto/ })).toBeDisabled();
-    expect(screen.getByText(/key de Gemini en Ajustes/)).toBeInTheDocument();
   });
 
   test('con key habilita Escribir y Foto y navega conservando la fecha', async () => {
@@ -92,7 +92,7 @@ describe('Buscar', () => {
     const [e] = await listEntries(today);
     expect(e).toMatchObject({ slot: 'lunch', source: 'search', name: 'Leche Colun Light' });
     expect(e.items[0].grams).toBe(200);
-    expect(screen.getByTestId('where')).toHaveTextContent(/^\/$/);
+    expect(await screen.findByTestId('where')).toHaveTextContent(/^\/$/);
   });
 
   test.each([
