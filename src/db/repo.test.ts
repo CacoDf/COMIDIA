@@ -6,8 +6,8 @@ import {
 import type { Food, LogEntry } from '../domain/types';
 
 const m = { kcal: 100, protein: 1, carbs: 2, fat: 3 };
-const entry = (date: string, slot: LogEntry['slot'] = 'lunch') =>
-  ({ date, slot, name: 'x', items: [{ name: 'x', grams: 100, macros: m }], source: 'manual' }) as const;
+const entry = (date: string, slot: LogEntry['slot'] = 'lunch'): Omit<LogEntry, 'id' | 'createdAt'> =>
+  ({ date, slot, name: 'x', items: [{ name: 'x', grams: 100, macros: m }], source: 'manual' });
 const food = (over: Partial<Food>): Food => ({
   id: 'f1', name: 'Plátano', per100: m, portions: [{ label: '100 g', grams: 100 }], source: 'generic', updatedAt: 1, ...over,
 });
