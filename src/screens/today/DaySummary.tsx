@@ -7,7 +7,7 @@ const KEYS = ['kcal', 'protein', 'carbs', 'fat'] as const;
 /** Las cuatro cifras del día con el mismo peso: lo que queda (o lo que sobra), consumido de meta y barra. */
 export function DaySummary({ eaten, target }: { eaten: Macros; target: Macros }) {
   return (
-    <section className="group" aria-label="Resumen del día">
+    <section className="group summary-wrap" aria-label="Resumen del día">
       <div className="group__body summary">
         {KEYS.map((k) => {
           const fmt = k === 'kcal' ? fmtKcal : fmtG;

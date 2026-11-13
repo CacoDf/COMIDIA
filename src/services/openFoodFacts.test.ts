@@ -83,3 +83,8 @@ test('búsqueda acepta respuesta con products', async () => {
   mockFetch({ products: [full] });
   expect(await searchProducts('leche')).toHaveLength(1);
 });
+
+test('un valor vacío no se toma como cero', () => {
+  expect(toFood({ ...full, nutriments: { ...full.nutriments, proteins_100g: '' } })).toBeNull();
+  expect(toFood({ ...full, nutriments: { ...full.nutriments, fat_100g: ' ' } })).toBeNull();
+});

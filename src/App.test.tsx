@@ -10,7 +10,7 @@ beforeEach(async () => {
 
 test('sin perfil redirige a la bienvenida', async () => {
   render(<App />);
-  expect(await screen.findByRole('heading', { level: 1, name: 'Bienvenido a Comidia' })).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { level: 1, name: 'Hola' })).toBeInTheDocument();
 });
 
 test('con perfil muestra Hoy y la barra de pestañas', async () => {

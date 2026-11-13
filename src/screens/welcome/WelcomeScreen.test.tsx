@@ -38,7 +38,7 @@ beforeEach(async () => {
 test('muestra las metas calculadas y al empezar guarda perfil y peso', async () => {
   const user = userEvent.setup();
   renderWelcome();
-  expect(screen.getByRole('heading', { level: 1, name: 'Bienvenido a Comidia' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { level: 1, name: 'Hola' })).toBeInTheDocument();
   await fillBase(user);
   const metas = screen.getByRole('region', { name: 'Tus metas diarias' });
   expect(metas).toHaveTextContent('2.209');

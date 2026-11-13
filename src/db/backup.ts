@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { db, resetDb, SINGLETON_KEY } from './db';
-import { getProfile, getSettings, patchSettings } from './repo';
+import { getProfile, getSettings } from './repo';
 import { toLocalDate } from '../domain/dates';
 import { FoodSchema, LogEntrySchema, ProfileSchema, SavedMealSchema, WeightEntrySchema } from '../domain/schemas';
 import type { Food, LogEntry, Profile, SavedMeal, Settings, WeightEntry } from '../domain/types';
@@ -46,7 +46,7 @@ export class BackupError extends Error {
 const BackupSchema = z.object({
   app: z.literal(BACKUP_APP),
   formatVersion: z.literal(BACKUP_FORMAT_VERSION),
-  exportedAt: z.string(),
+  exportedAt: z.string().refine((s) => !Number.isNaN(Date.parse(s)), 'fecha inválida'),
   data: z.object({
     profile: ProfileSchema.optional(),
     settings: z.object({
@@ -63,7 +63,6 @@ const BackupSchema = z.object({
 
 export async function exportBackup(): Promise<BackupFile> {
   const now = Date.now();
-  await patchSettings({ lastExportAt: now });
   const { geminiKey: _omit, ...settings } = await getSettings();
   const [entries, weights, foods, savedMeals, profile] = await Promise.all([
     db.entries.toArray(),

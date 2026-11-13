@@ -164,6 +164,18 @@ describe('Cantidad', () => {
     expect(onConfirm.mock.calls[0][0].grams).toBe(80);
   });
 
+  test('dos toques seguidos en Agregar confirman una sola vez', async () => {
+    const user = userEvent.setup();
+    let resolve!: () => void;
+    const onConfirm = vi.fn(() => new Promise<void>((r) => { resolve = r; }));
+    render(<QuantitySheet food={food} onClose={() => {}} onConfirm={onConfirm} />);
+    const add = screen.getByRole('button', { name: 'Agregar' });
+    await user.click(add);
+    await user.click(add);
+    expect(onConfirm).toHaveBeenCalledTimes(1);
+    resolve();
+  });
+
   test('cantidad inválida deshabilita Agregar', async () => {
     const user = userEvent.setup();
     render(<QuantitySheet food={food} onClose={() => {}} onConfirm={() => {}} />);

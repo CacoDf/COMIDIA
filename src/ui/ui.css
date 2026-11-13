@@ -328,7 +328,7 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 }
 .tabbar__item {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-  height: var(--tabbar-h); color: var(--label-3); text-decoration: none;
+  height: var(--tabbar-h); color: var(--label-2); text-decoration: none;
   font-size: 0.6rem; font-weight: 500; letter-spacing: 0.01em;
 }
 .tabbar__item[aria-current='page'] { color: var(--tint); }
@@ -347,6 +347,8 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18);
   animation: sheet-up 320ms var(--ease-out);
 }
+.sheet__handle { touch-action: none; cursor: grab; }
+.sheet { transition: transform 220ms var(--ease-out); }
 .sheet__grabber { width: 36px; height: 5px; border-radius: 3px; background: var(--label-3); margin: 6px auto 0; }
 .sheet__header { display: grid; grid-template-columns: minmax(84px, 1fr) minmax(0, auto) minmax(84px, 1fr); align-items: center; padding: 0 8px; min-height: 48px; }
 .sheet__header h2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -407,3 +409,9 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 }
 .grams-input input[aria-invalid='true'] { color: var(--danger); }
 .grams-input:focus-within { box-shadow: 0 0 0 2px var(--tint); }
+
+/* Letra grande (Dynamic Type): el resumen pasa a 2 columnas para que nada se corte */
+.summary-wrap { container-type: inline-size; }
+@container (max-width: 18em) {
+  .summary { grid-template-columns: 1fr 1fr; row-gap: 16px; }
+}

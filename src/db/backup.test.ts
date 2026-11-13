@@ -45,9 +45,14 @@ test('el archivo no contiene la key', async () => {
   expect(JSON.stringify(await exportBackup())).not.toContain('SECRETA');
 });
 
-test('exportar registra la fecha del último respaldo', async () => {
+test('exportar no marca el respaldo como hecho (eso pasa al compartir)', async () => {
   await exportBackup();
-  expect((await getSettings()).lastExportAt).toBeGreaterThan(0);
+  expect((await getSettings()).lastExportAt).toBeUndefined();
+});
+
+test('una fecha de exportación inválida se rechaza', () => {
+  const text = JSON.stringify({ app: 'comidia', formatVersion: 1, exportedAt: 'x', data: { settings: {}, entries: [], weights: [], foods: [], savedMeals: [] } });
+  expect(() => parseBackup(text)).toThrow(expect.objectContaining({ kind: 'invalid' }));
 });
 
 test('importar conserva la key y el modelo del teléfono', async () => {

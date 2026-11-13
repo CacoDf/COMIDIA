@@ -1,7 +1,7 @@
 import { useId, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Download, Upload } from 'lucide-react';
-import { getSettings } from '../../db/repo';
+import { getSettings, patchSettings } from '../../db/repo';
 import { backupFileName, BackupError, exportBackup, importBackup, parseBackup, summarize, type BackupErrorKind, type BackupFile } from '../../db/backup';
 import { shareOrDownload } from '../../lib/share';
 import { dayTitle, longDate, toLocalDate } from '../../domain/dates';
@@ -32,7 +32,10 @@ export function BackupSettings() {
       const b = await exportBackup();
       const file = new File([JSON.stringify(b)], backupFileName(new Date()), { type: 'application/json' });
       const r = await shareOrDownload(file);
-      if (r !== 'cancelled') toast.show('Respaldo listo');
+      if (r !== 'cancelled') {
+        await patchSettings({ lastExportAt: Date.now() });
+        toast.show('Respaldo listo');
+      }
     } finally {
       setBusy(false);
     }
@@ -49,9 +52,13 @@ export function BackupSettings() {
 
   async function confirmImport() {
     if (!pending) return;
-    await importBackup(pending);
+    try {
+      await importBackup(pending);
+      toast.show('Respaldo importado');
+    } catch {
+      setError('No se pudo importar el respaldo. Tus datos quedaron como estaban.');
+    }
     setPending(null);
-    toast.show('Respaldo importado');
   }
 
   const last = settings?.lastExportAt;

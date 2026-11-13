@@ -24,7 +24,7 @@ export default function WelcomeScreen() {
   }
 
   return (
-    <Screen title="Bienvenido a Comidia" tabbar={false} subtitle="Cuéntanos de ti para calcular cuánto comer cada día.">
+    <Screen title="Hola" tabbar={false} subtitle="Cuéntanos de ti para que Comidia calcule cuánto comer cada día.">
       <ProfileForm draft={draft} onChange={setDraft} />
       {targets && <TargetsCard targets={targets} />}
       <Button size="large" onClick={start} disabled={!ready} loading={saving}>Empezar</Button>

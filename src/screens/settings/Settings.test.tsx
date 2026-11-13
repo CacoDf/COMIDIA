@@ -74,6 +74,29 @@ describe('Respaldo', () => {
     expect(await screen.findByText(/Último respaldo: hoy/)).toBeInTheDocument();
   });
 
+  test('cancelar el menú de compartir no cuenta como respaldo', async () => {
+    const user = userEvent.setup();
+    vi.spyOn(share, 'shareOrDownload').mockResolvedValue('cancelled');
+    wrap(<BackupSettings />);
+    await user.click(await screen.findByRole('button', { name: 'Exportar respaldo' }));
+    await waitFor(() => expect(share.shareOrDownload).toHaveBeenCalled());
+    expect((await getSettings()).lastExportAt).toBeUndefined();
+    expect(screen.getByText(/Último respaldo: nunca/)).toBeInTheDocument();
+  });
+
+  test('si la importación falla muestra un mensaje y no toca los datos', async () => {
+    const user = userEvent.setup();
+    const backup = await exportBackup();
+    await addEntry({ date: '2026-11-02', slot: 'lunch', name: 'actual', items: [], source: 'manual' });
+    const backupMod = await import('../../db/backup');
+    vi.spyOn(backupMod, 'importBackup').mockRejectedValue(new Error('ConstraintError'));
+    wrap(<BackupSettings />);
+    await user.upload(await screen.findByLabelText('Importar respaldo'), new File([JSON.stringify(backup)], 'r.json'));
+    await user.click(within(await screen.findByRole('dialog', { name: 'Importar respaldo' })).getByRole('button', { name: 'Reemplazar' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent(/No se pudo importar/);
+    expect(await listEntries('2026-11-02')).toHaveLength(1);
+  });
+
   test('importar muestra un resumen, pide confirmación y reemplaza', async () => {
     const user = userEvent.setup();
     await addEntry({ date: '2026-11-01', slot: 'lunch', name: 'vieja', items: [], source: 'manual' });

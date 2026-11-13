@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router';
 import { Button } from './Button';
@@ -95,6 +95,27 @@ test('Sheet no le roba el foco al campo cuando el padre se redibuja', async () =
   await user.click(screen.getByLabelText('texto'));
   await user.type(screen.getByLabelText('texto'), '0,5');
   expect(screen.getByLabelText('texto')).toHaveValue('0,5');
+});
+
+test('Sheet acepta otro texto para cerrar', async () => {
+  const onClose = vi.fn();
+  render(<Sheet open title="Detalle" closeLabel="Cerrar" onClose={onClose}><p>x</p></Sheet>);
+  await userEvent.click(screen.getByRole('button', { name: 'Cerrar' }));
+  expect(onClose).toHaveBeenCalled();
+});
+
+test('Sheet se cierra al arrastrarla hacia abajo, no con un arrastre corto', () => {
+  const onClose = vi.fn();
+  render(<Sheet open title="Arrastre" onClose={onClose}><p>x</p></Sheet>);
+  const handle = screen.getByTestId('sheet-handle');
+  fireEvent.pointerDown(handle, { clientY: 100, pointerId: 1 });
+  fireEvent.pointerMove(handle, { clientY: 140, pointerId: 1 });
+  fireEvent.pointerUp(handle, { clientY: 140, pointerId: 1 });
+  expect(onClose).not.toHaveBeenCalled();
+  fireEvent.pointerDown(handle, { clientY: 100, pointerId: 1 });
+  fireEvent.pointerMove(handle, { clientY: 260, pointerId: 1 });
+  fireEvent.pointerUp(handle, { clientY: 260, pointerId: 1 });
+  expect(onClose).toHaveBeenCalledTimes(1);
 });
 
 test('Sheet cerrado no muestra nada', () => {

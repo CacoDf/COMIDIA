@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { macrosForGrams } from '../../domain/macros';
 import type { Food, Item } from '../../domain/types';
 import { Sheet } from '../../ui/Sheet';
@@ -13,12 +13,14 @@ const GRAMS = '__g';
 export function QuantitySheet({ food, onClose, onConfirm, confirmLabel = 'Agregar' }: {
   food: Food;
   onClose: () => void;
-  onConfirm: (item: Item) => void;
+  onConfirm: (item: Item) => void | Promise<void>;
   confirmLabel?: string;
 }) {
   const portions = food.portions.filter((p) => p.label !== '100 g' && p.grams > 0);
   const [portion, setPortion] = useState<string>(portions[0] ? portions[0].label : GRAMS);
   const [qty, setQty] = useState<number | null>(portion === GRAMS ? 100 : 1);
+  const [busy, setBusy] = useState(false);
+  const busyRef = useRef(false);
 
   const per = portion === GRAMS ? 1 : (portions.find((p) => p.label === portion)?.grams ?? 1);
   const grams = qty !== null && qty > 0 ? Math.round(qty * per * 10) / 10 : null;
@@ -35,8 +37,18 @@ export function QuantitySheet({ food, onClose, onConfirm, confirmLabel = 'Agrega
       title={food.name}
       onClose={onClose}
       doneLabel={confirmLabel}
-      doneDisabled={grams === null}
-      onDone={() => grams !== null && m && onConfirm({ name: food.name, grams, macros: m, foodId: food.id })}
+      doneDisabled={grams === null || busy}
+      onDone={async () => {
+        if (grams === null || !m || busyRef.current) return;
+        busyRef.current = true;
+        setBusy(true);
+        try {
+          await onConfirm({ name: food.name, grams, macros: m, foodId: food.id });
+        } finally {
+          busyRef.current = false;
+          setBusy(false);
+        }
+      }}
     >
       <ListSection
         header="¿Cuánto comiste?"

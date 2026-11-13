@@ -60,7 +60,7 @@ export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose
   }
 
   return (
-    <Sheet open title={entry.name} onClose={onClose}>
+    <Sheet open title={entry.name} onClose={onClose} closeLabel="Cerrar">
       <ListSection header="Ingredientes" footer={`Total: ${fmtKcal(total.kcal)} kcal · ${macroLine(total)}`}>
         {entry.items.map((it, i) => (
           <ListRow key={i} title={it.name} subtitle={`${fmtG(it.grams)} g · ${macroLine(it.macros)}`} detail={`${fmtKcal(it.macros.kcal)}`} />

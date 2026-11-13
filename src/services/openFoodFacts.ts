@@ -16,6 +16,7 @@ export class OffError extends Error {
 }
 
 function num(v: unknown): number | undefined {
+  if (typeof v === 'string' && v.trim() === '') return undefined;
   const n = typeof v === 'string' ? Number(v) : v;
   return typeof n === 'number' && Number.isFinite(n) && n >= 0 ? n : undefined;
 }
