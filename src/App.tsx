@@ -1,7 +1,6 @@
 import { HashRouter, Navigate, Outlet, Route, Routes } from 'react-router';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getProfile } from './db/repo';
-import { Screen } from './ui/Screen';
 import { TabBar } from './ui/TabBar';
 import { ToastProvider } from './ui/Toast';
 import LabScreen from './screens/lab/LabScreen';
@@ -16,18 +15,10 @@ import SavedMealsPicker from './screens/add/SavedMealsPicker';
 import MealsScreen from './screens/meals/MealsScreen';
 import SuggestScreen from './screens/meals/SuggestScreen';
 import ProgressScreen from './screens/progress/ProgressScreen';
+import SettingsScreen from './screens/settings/SettingsScreen';
 import ReviewScreen from './screens/review/ReviewScreen';
 import { DraftProvider } from './state/DraftContext';
 import './ui/ui.css';
-
-/** Pantalla provisoria hasta que su tarea la implemente. */
-function Pending({ title, tabbar = true }: { title: string; tabbar?: boolean }) {
-  return (
-    <Screen title={title} tabbar={tabbar}>
-      <p className="t-subhead c-secondary">En construcción.</p>
-    </Screen>
-  );
-}
 
 /** Exige un perfil: sin perfil manda a la bienvenida. */
 function RequireProfile() {
@@ -56,7 +47,7 @@ export function AppRoutes() {
           <Route path="/" element={<TodayScreen />} />
           <Route path="/comidas" element={<MealsScreen />} />
           <Route path="/progreso" element={<ProgressScreen />} />
-          <Route path="/ajustes" element={<Pending title="Ajustes" />} />
+          <Route path="/ajustes" element={<SettingsScreen />} />
         </Route>
         <Route path="/agregar/:slot" element={<AddMenuScreen />} />
         <Route path="/agregar/:slot/texto" element={<TextScreen />} />

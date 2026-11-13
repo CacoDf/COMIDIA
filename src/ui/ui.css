@@ -218,6 +218,7 @@ button.row:active, a.row:active { background: var(--fill-2); }
 }
 .field__input::placeholder { color: var(--label-3); }
 .field__unit { flex: none; color: var(--label-2); }
+.field__select { appearance: none; -webkit-appearance: none; color: var(--label-2); cursor: pointer; text-overflow: ellipsis; }
 .field--stacked { flex-direction: column; align-items: stretch; gap: 0; padding-top: 8px; padding-bottom: 8px; }
 .field--stacked .field__input { text-align: left; }
 .textarea { width: 100%; min-height: 96px; padding: 12px var(--gutter); border: 0; background: none; resize: none; outline: none; line-height: 1.35; }

@@ -13,6 +13,7 @@ import { ListRow, ListSection } from '../../ui/List';
 import { fmtG, fmtKcal, SLOT_LABEL } from '../../ui/labels';
 import { DaySummary } from './DaySummary';
 import { EntrySheet } from './EntrySheet';
+import { BackupReminder } from './BackupReminder';
 
 /** Fecha activa desde ?d=, nunca en el futuro. */
 export function useActiveDate(): [string, (d: string) => void] {
@@ -50,6 +51,7 @@ export default function TodayScreen() {
         </BarButton>
       }
     >
+      {date === today && <BackupReminder />}
       {targets && <DaySummary eaten={eaten} target={targets} />}
 
       {MEAL_SLOTS.map((slot) => {

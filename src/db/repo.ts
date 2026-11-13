@@ -41,6 +41,10 @@ export async function listEntries(date: string): Promise<LogEntry[]> {
   return (await db.entries.where('date').equals(date).toArray()).sort((a, b) => a.createdAt - b.createdAt);
 }
 
+export async function firstEntryDate(): Promise<string | undefined> {
+  return (await db.entries.orderBy('date').first())?.date;
+}
+
 export async function listEntriesInRange(from: string, to: string): Promise<LogEntry[]> {
   return db.entries.where('date').between(from, to, true, true).toArray();
 }
