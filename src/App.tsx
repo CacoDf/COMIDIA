@@ -6,6 +6,7 @@ import { TabBar } from './ui/TabBar';
 import { ToastProvider } from './ui/Toast';
 import LabScreen from './screens/lab/LabScreen';
 import WelcomeScreen from './screens/welcome/WelcomeScreen';
+import TodayScreen from './screens/today/TodayScreen';
 import './ui/ui.css';
 
 /** Pantalla provisoria hasta que su tarea la implemente. */
@@ -41,7 +42,7 @@ export function AppRoutes() {
       <Route path="/lab" element={<LabScreen />} />
       <Route element={<RequireProfile />}>
         <Route element={<WithTabBar />}>
-          <Route path="/" element={<Pending title="Hoy" />} />
+          <Route path="/" element={<TodayScreen />} />
           <Route path="/comidas" element={<Pending title="Comidas" />} />
           <Route path="/progreso" element={<Pending title="Progreso" />} />
           <Route path="/ajustes" element={<Pending title="Ajustes" />} />

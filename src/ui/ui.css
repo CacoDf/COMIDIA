@@ -223,6 +223,18 @@ button.row:active, a.row:active { background: var(--fill-2); }
 .textarea { width: 100%; min-height: 96px; padding: 12px var(--gutter); border: 0; background: none; resize: none; outline: none; line-height: 1.35; }
 .field__input[aria-invalid='true'] { color: var(--danger); }
 
+/* Resumen del día: cuatro columnas iguales */
+.summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding: 14px 14px 12px; }
+.summary__col { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.summary__label { display: flex; align-items: center; gap: 5px; color: var(--label-2); font-weight: 500; white-space: nowrap; }
+.summary__dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.summary__value { font-size: 1.294rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; margin-top: 4px; white-space: nowrap; }
+.summary__unit { font-size: 0.765rem; font-weight: 500; color: var(--label-2); }
+.summary .progress { margin-top: 5px; }
+.summary__of { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.meal-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.meal-header__kcal { text-transform: none; }
+
 /* Barra de progreso */
 .progress { height: 4px; border-radius: 2px; background: var(--fill-2); overflow: hidden; }
 .progress__fill { height: 100%; border-radius: inherit; transition: width 350ms var(--ease-out); }

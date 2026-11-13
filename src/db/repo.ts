@@ -55,6 +55,11 @@ export async function updateEntry(id: string, patch: Partial<Omit<LogEntry, 'id'
   await db.entries.update(id, patch);
 }
 
+/** Vuelve a guardar una entrada tal cual (para "Deshacer"). */
+export async function restoreEntry(e: LogEntry): Promise<void> {
+  await db.entries.put(e);
+}
+
 export async function deleteEntry(id: string): Promise<void> {
   await db.entries.delete(id);
 }

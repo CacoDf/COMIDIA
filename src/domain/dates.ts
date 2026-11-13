@@ -28,6 +28,22 @@ export function ageOn(birthDate: string, on: string): number {
   return y - by - (hadBirthday ? 0 : 1);
 }
 
+const shortFmt = new Intl.DateTimeFormat('es-CL', { weekday: 'short', day: 'numeric', month: 'short' });
+const longFmt = new Intl.DateTimeFormat('es-CL', { weekday: 'long', day: 'numeric', month: 'long' });
+
+/** "Hoy", "Ayer" o "jue, 12 nov". */
+export function dayTitle(date: string, today = todayLocal()): string {
+  if (date === today) return 'Hoy';
+  if (date === addDays(today, -1)) return 'Ayer';
+  const s = shortFmt.format(parseLocal(date)).replace(/\./g, '');
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/** "viernes, 13 de noviembre". */
+export function longDate(date: string): string {
+  return longFmt.format(parseLocal(date));
+}
+
 /** Semana de lunes a domingo que contiene la fecha. */
 export function weekRange(date: string): { from: string; to: string } {
   const dow = parseLocal(date).getDay(); // 0 = domingo
