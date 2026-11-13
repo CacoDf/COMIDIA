@@ -1,0 +1,122 @@
+{
+  "title": "Elige cómo se ve Comidia",
+  "question": "El sorteo asignó «La colación». Quédate con ella, elige otra, o vuelve a sortear.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "La colación",
+      "kicker": "EL SORTEO",
+      "lineage": "el tupper rotulado con cinta de papel y plumón, como en el refri de la U o la pega",
+      "thesis": "Tu día es un tupper de cuatro compartimentos: calorías, proteína, carbos y grasa, cada uno con su tapa de color, llenándose al mismo tamaño.",
+      "palette": ["#F2F4F1", "#1D1D1B", "#2F6FD6", "#3FA34D", "#F08A24", "#E04F8C", "#E9D8A6"],
+      "materials": ["polipropileno translúcido", "cinta de papel escrita a plumón", "pestañas de cierre a presión"],
+      "viewport": "Arriba una cinta de papel con el día escrito a plumón; debajo los cuatro compartimentos vistos desde arriba, mismo tamaño, cada uno lleno según lo consumido con el número restante grande; abajo las cuatro comidas como tapas apiladas y el botón Agregar fijo al alcance del pulgar.",
+      "risk": "Puede verse infantil si los colores de las tapas se usan sin disciplina.",
+      "raised": [
+        { "from": "Hoja de exposición", "raise": "Todos los números en cifras tabulares y una escala tonal fija; ningún color suelto fuera de las cuatro tapas." },
+        { "from": "Partitura de danza", "raise": "El largo es la cantidad exacta: cada relleno mide lo que de verdad comiste, sin redondeos decorativos." },
+        { "from": "Folio botánico", "raise": "Todos los medidores comparten una misma escala fija entre días, para comparar la semana de un vistazo." },
+        { "from": "Catálogo de personajes", "raise": "Las comidas guardadas se ordenan en celdas enteras, cada una con su etiqueta propia." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "La boleta",
+      "kicker": "LA ELECCIÓN DE IMPECCABLE",
+      "lineage": "la boleta en papel térmico del supermercado",
+      "thesis": "Tu día como la boleta del súper: cada comida es una línea con su total, y abajo el subtotal te dice cuánto te queda.",
+      "palette": ["#F7F6F2", "#2B2B2B", "#8C8C88", "#1F4FA3"],
+      "materials": ["papel térmico", "borde dentado", "tinta que se destiñe"],
+      "viewport": "Una tira de boleta que baja por la pantalla: encabezado con la fecha, líneas por comida con kcal a la derecha, y al pie los cuatro totales contra la meta en columnas iguales.",
+      "risk": "La boleta como interfaz ya es un recurso conocido, y el papel térmico tiende a verse apagado a pleno sol."
+    },
+    {
+      "id": "challenger-jcard",
+      "label": "El casete",
+      "verdict": "competitive",
+      "lineage": "la carátula de un casete grabado a mano",
+      "thesis": "El día es un casete de tantas calorías: las comidas son temas con su duración y el lado no se puede pasar de la cinta.",
+      "palette": ["#FBFBF7", "#2A3F9D", "#9A9A9A", "#D6252B"],
+      "materials": ["cartulina rayada", "lápiz pasta azul", "franja de marca roja"],
+      "viewport": "Lado A desayuno y almuerzo, lado B cena y colaciones; cada comida una línea con kcal alineadas a la derecha y una barra de cinta restante.",
+      "case": "Funde bien: lista de comidas con kcal a la derecha y un total que debe caber. Pierde en cercanía: el casete no es parte del día de ustedes.",
+      "risk": "Se lee como disfraz retro si la letra a mano se exagera."
+    },
+    {
+      "id": "challenger-bitmap",
+      "label": "El afiche de píxeles",
+      "verdict": "competitive",
+      "lineage": "los catálogos de tipografías en píxeles de los 80",
+      "thesis": "Las cuatro cifras del día como afiche: números enormes en píxeles, todo lo demás en letra fina.",
+      "palette": ["#F4F4F0", "#111111", "#FF3B1F"],
+      "materials": ["tipografía de píxeles", "trama de puntos"],
+      "viewport": "Las calorías restantes a tamaño afiche, los tres macros debajo en el mismo tipo a menor escala, y la lista de comidas en texto fino.",
+      "case": "Gana en claridad: lo que te queda se lee a dos metros. Pierde en cercanía: se siente de diseño gráfico, no de comida.",
+      "risk": "Los números pixelados cansan si todo es enorme."
+    },
+    {
+      "id": "challenger-exposure",
+      "label": "Hoja de exposición",
+      "verdict": "declined",
+      "lineage": "registro de laboratorio fotográfico",
+      "thesis": "Láminas translúcidas superpuestas sobre una escala tonal.",
+      "palette": ["#E8E8E4", "#3A3A38", "#C2187A"],
+      "materials": ["papel vegetal", "trama"],
+      "viewport": "Láminas apiladas con valores en cifras tabulares.",
+      "case": "No calza: nadie se identifica con un laboratorio fotográfico al comer.",
+      "kept": "Su disciplina de cifras tabulares y escala tonal fija.",
+      "risk": "Frío y técnico."
+    },
+    {
+      "id": "challenger-laban",
+      "label": "Partitura de danza",
+      "verdict": "declined",
+      "lineage": "notación de movimiento",
+      "thesis": "Bloques cuyo largo es la duración exacta.",
+      "palette": ["#FFFFFF", "#111111", "#CCCCCC"],
+      "materials": ["papel de partitura", "bloques sombreados"],
+      "viewport": "Un eje vertical con bloques por comida.",
+      "case": "No calza: notación ajena y difícil de leer rápido.",
+      "kept": "Que el largo de cada barra sea la cantidad exacta.",
+      "risk": "Ilegible sin aprenderla."
+    },
+    {
+      "id": "challenger-botanical",
+      "label": "Folio botánico",
+      "verdict": "declined",
+      "lineage": "láminas de una planta a lo largo del año",
+      "thesis": "Láminas a escala fija para comparar etapas.",
+      "palette": ["#F3EAD8", "#4A6B3A", "#B0302A"],
+      "materials": ["lámina grabada", "filetes sepia"],
+      "viewport": "Días como láminas en una misma línea base.",
+      "case": "No calza: es el look por defecto (crema y serif) y no habla del día a día.",
+      "kept": "Una misma escala fija para comparar días.",
+      "risk": "Se ve de museo."
+    },
+    {
+      "id": "challenger-mascots",
+      "label": "Catálogo de personajes",
+      "verdict": "declined",
+      "lineage": "catálogo de mascotas en grilla pastel",
+      "thesis": "Cada comida como un personaje con ficha.",
+      "palette": ["#FCE4EC", "#E3F2FD", "#FFF9C4", "#333333"],
+      "materials": ["rellenos planos", "borde blanco"],
+      "viewport": "Una grilla de comidas como personajes.",
+      "case": "No calza: distrae de los números, que son lo central.",
+      "kept": "Celdas enteras con etiqueta propia para las comidas guardadas.",
+      "risk": "Infantil."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de las apps de nutrición",
+    "thesis": "Lo que muestran todas: anillos de progreso, verde y blanco, tarjetas redondeadas.",
+    "palette": ["#FFFFFF", "#111827", "#22C55E"],
+    "materials": ["grilla limpia", "anillos de progreso"],
+    "viewport": "Un anillo grande de calorías arriba, tres barras de macros y la lista de comidas en tarjetas.",
+    "risk": "Igual a cualquier otra app de nutrición."
+  },
+  "steer": true
+}
