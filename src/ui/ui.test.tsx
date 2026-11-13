@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router';
@@ -78,6 +79,22 @@ test('Sheet abierto muestra título y se cierra con Cancelar', async () => {
   expect(screen.getByRole('dialog', { name: 'Cantidad' })).toBeInTheDocument();
   await userEvent.click(screen.getByRole('button', { name: 'Cancelar' }));
   expect(onClose).toHaveBeenCalled();
+});
+
+test('Sheet no le roba el foco al campo cuando el padre se redibuja', async () => {
+  const user = userEvent.setup();
+  function Parent() {
+    const [v, setV] = useState('');
+    return (
+      <Sheet open title="Campo" onClose={() => {}}>
+        <input aria-label="texto" value={v} onChange={(e) => setV(e.target.value)} />
+      </Sheet>
+    );
+  }
+  render(<Parent />);
+  await user.click(screen.getByLabelText('texto'));
+  await user.type(screen.getByLabelText('texto'), '0,5');
+  expect(screen.getByLabelText('texto')).toHaveValue('0,5');
 });
 
 test('Sheet cerrado no muestra nada', () => {

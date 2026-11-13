@@ -246,6 +246,11 @@ button.row:active, a.row:active { background: var(--fill-2); }
 button.row:disabled { color: var(--label-3); cursor: default; }
 button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: var(--label-3); }
 
+/* Pasos de preparación */
+.steps { margin: 0; padding: 10px var(--gutter) 10px calc(var(--gutter) + 20px); color: var(--label); }
+.steps li { padding: 3px 0; }
+.steps li::marker { color: var(--label-2); font-variant-numeric: tabular-nums; }
+
 /* Escáner */
 .scanner { position: relative; border-radius: var(--radius-group); overflow: hidden; background: #000; aspect-ratio: 4 / 3; }
 .scanner video { width: 100%; height: 100%; object-fit: cover; display: block; }

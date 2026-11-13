@@ -12,6 +12,9 @@ import SearchScreen from './screens/add/SearchScreen';
 import TextScreen from './screens/add/TextScreen';
 import PhotoScreen from './screens/add/PhotoScreen';
 import BarcodeScreen from './screens/add/BarcodeScreen';
+import SavedMealsPicker from './screens/add/SavedMealsPicker';
+import MealsScreen from './screens/meals/MealsScreen';
+import SuggestScreen from './screens/meals/SuggestScreen';
 import ReviewScreen from './screens/review/ReviewScreen';
 import { DraftProvider } from './state/DraftContext';
 import './ui/ui.css';
@@ -50,7 +53,7 @@ export function AppRoutes() {
       <Route element={<RequireProfile />}>
         <Route element={<WithTabBar />}>
           <Route path="/" element={<TodayScreen />} />
-          <Route path="/comidas" element={<Pending title="Comidas" />} />
+          <Route path="/comidas" element={<MealsScreen />} />
           <Route path="/progreso" element={<Pending title="Progreso" />} />
           <Route path="/ajustes" element={<Pending title="Ajustes" />} />
         </Route>
@@ -59,9 +62,9 @@ export function AppRoutes() {
         <Route path="/agregar/:slot/foto" element={<PhotoScreen />} />
         <Route path="/agregar/:slot/codigo" element={<BarcodeScreen />} />
         <Route path="/agregar/:slot/buscar" element={<SearchScreen />} />
-        <Route path="/agregar/:slot/mis-comidas" element={<Pending title="Mis comidas" tabbar={false} />} />
+        <Route path="/agregar/:slot/mis-comidas" element={<SavedMealsPicker />} />
         <Route path="/revision" element={<ReviewScreen />} />
-        <Route path="/sugerencias" element={<Pending title="Sugerencias" tabbar={false} />} />
+        <Route path="/sugerencias" element={<SuggestScreen />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

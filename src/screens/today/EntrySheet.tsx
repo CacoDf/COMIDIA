@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useDraft } from '../../state/DraftContext';
-import { copyEntry, deleteEntry, restoreEntry, updateEntry } from '../../db/repo';
+import { copyEntry, deleteEntry, restoreEntry, saveMeal, updateEntry } from '../../db/repo';
 import { sumMacros } from '../../domain/macros';
 import { dayTitle } from '../../domain/dates';
 import { MEAL_SLOTS, type LogEntry, type MealSlot } from '../../domain/types';
@@ -32,6 +32,12 @@ export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose
     navigate('/revision');
   }
 
+  async function keep() {
+    await saveMeal({ name: entry!.name, items: entry!.items });
+    toast.show('Guardado en Mis comidas');
+    onClose();
+  }
+
   async function move(slot: MealSlot) {
     await updateEntry(entry!.id, { slot });
     toast.show(`Movido a ${SLOT_LABEL[slot]}`);
@@ -60,6 +66,7 @@ export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose
           <ListRow key={i} title={it.name} subtitle={`${fmtG(it.grams)} g · ${macroLine(it.macros)}`} detail={`${fmtKcal(it.macros.kcal)}`} />
         ))}
         <ListRow tone="action" title="Editar" onClick={edit} />
+        <ListRow tone="action" title="Guardar en Mis comidas" onClick={keep} />
       </ListSection>
 
       <ListSection header="Mover a">

@@ -17,12 +17,15 @@ type Props = {
 export function Sheet({ open, title, onClose, doneLabel, onDone, doneDisabled, children }: Props) {
   const titleId = useId();
   const panel = useRef<HTMLDivElement>(null);
+  const closeRef = useRef(onClose);
+  closeRef.current = onClose;
 
+  // Solo al abrir: si dependiera de onClose, cada redibujo le robaría el foco al campo que se está escribiendo.
   useEffect(() => {
     if (!open) return;
     const previous = document.activeElement as HTMLElement | null;
     panel.current?.focus();
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && closeRef.current();
     document.addEventListener('keydown', onKey);
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -31,7 +34,7 @@ export function Sheet({ open, title, onClose, doneLabel, onDone, doneDisabled, c
       document.body.style.overflow = overflow;
       previous?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   if (!open) return null;
   return createPortal(
