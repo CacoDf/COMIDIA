@@ -389,3 +389,21 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
   font-size: 0.706rem; font-weight: 500;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 }
+
+/* Fila de revisión: abrir ingrediente + gramos editables */
+.review-row { gap: 8px; padding-top: 6px; padding-bottom: 6px; }
+.review-row__main {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0; border: 0; background: none; text-align: left; color: var(--label); cursor: pointer;
+}
+.review-row__main:active { opacity: 0.6; }
+.grams-input {
+  flex: none; display: inline-flex; align-items: center; gap: 3px;
+  padding: 0 10px; min-height: 36px; border-radius: 8px; background: var(--fill-2); color: var(--label-2);
+}
+.grams-input input {
+  width: 3.4em; min-height: 36px; padding: 0; border: 0; background: none; outline: none;
+  text-align: right; color: var(--label); font-variant-numeric: tabular-nums;
+}
+.grams-input input[aria-invalid='true'] { color: var(--danger); }
+.grams-input:focus-within { box-shadow: 0 0 0 2px var(--tint); }

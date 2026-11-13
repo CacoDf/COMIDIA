@@ -131,3 +131,30 @@ test('pickDefaultModel prefiere el flash-lite más nuevo', () => {
   expect(pickDefaultModel(['gemini-3.9-flash-lite-preview'])).toBe('gemini-3.9-flash-lite-preview');
   expect(pickDefaultModel([])).toBeUndefined();
 });
+
+describe('refineEstimate', () => {
+  test('envía los ingredientes actuales, la corrección y la foto', async () => {
+    const { refineEstimate } = await import('./gemini');
+    const fn = mockFetch(reply({ items: [huevo, { ...huevo, name: 'Mayonesa', grams: 15 }] }));
+    const items = await refineEstimate(cfg, {
+      items: [{ name: 'Huevo revuelto', grams: 100, macros: { kcal: 150, protein: 10, carbs: 1, fat: 11 } }],
+      correction: 'faltó la mayonesa',
+      photoB64: 'FOTO',
+    });
+    expect(items.map((i) => i.name)).toEqual(['Huevo revuelto', 'Mayonesa']);
+    const body = JSON.parse(fn.mock.calls[0][1].body);
+    const sent = JSON.stringify(body.contents);
+    expect(sent).toContain('faltó la mayonesa');
+    expect(sent).toContain('Huevo revuelto');
+    expect(body.contents[0].parts).toContainEqual({ inlineData: { mimeType: 'image/jpeg', data: 'FOTO' } });
+  });
+
+  test('sin foto manda el texto original', async () => {
+    const { refineEstimate } = await import('./gemini');
+    const fn = mockFetch(reply({ items: [huevo] }));
+    await refineEstimate(cfg, { items: [], correction: 'eran 3 huevos', text: '2 huevos revueltos' });
+    const sent = JSON.stringify(JSON.parse(fn.mock.calls[0][1].body).contents);
+    expect(sent).toContain('2 huevos revueltos');
+    expect(sent).not.toContain('inlineData');
+  });
+});

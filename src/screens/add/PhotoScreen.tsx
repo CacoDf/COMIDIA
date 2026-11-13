@@ -75,7 +75,7 @@ export default function PhotoScreen() {
     try {
       const b64 = await downscaleToJpegBase64(file);
       const items = await estimateFromPhoto(ai.config, b64, note.trim() || undefined);
-      setDraft({ date, slot: slot!, name: nameFromItems(items), items, source: 'photo' });
+      setDraft({ date, slot: slot!, name: nameFromItems(items), items, source: 'photo', context: { photoB64: b64, ...(note.trim() ? { text: note.trim() } : {}) } });
       navigate('/revision');
     } catch (e) {
       setError(aiErrorMessage(e instanceof AiError ? e.kind : 'unknown'));

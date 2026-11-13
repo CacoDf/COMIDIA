@@ -25,6 +25,17 @@ export function photoPrompt(note?: string): string {
   return `${ESTIMATE_RULES}\n- Calcula las porciones por lo que se ve en la foto (tamaño del plato, cubiertos, envases).${extra}`;
 }
 
+export function refinePrompt(req: { items: { name: string; grams: number; macros: { kcal: number; protein: number; carbs: number; fat: number } }[]; correction: string; text?: string; hasPhoto: boolean }): string {
+  const previous = JSON.stringify(req.items.map((i) => ({ name: i.name, grams: Math.round(i.grams), ...i.macros })));
+  const source = req.hasPhoto ? 'La foto de la comida va adjunta.' : req.text ? `La comida descrita originalmente: ${req.text}` : '';
+  return `${ESTIMATE_RULES}
+
+Ya hiciste esta estimación de la comida: ${previous}
+${source}
+El usuario la corrige así: «${req.correction.trim()}»
+Devuelve la lista COMPLETA corregida: agrega lo que falta, quita lo que no está, cambia cantidades o ingredientes si el usuario lo dice, y deja igual todo lo que no menciona.`;
+}
+
 export const LABEL_PROMPT = `Lee la tabla de información nutricional de esta foto de un producto chileno.
 Devuelve los valores por 100 g (o 100 ml): kcal (energía), protein, carbs (hidratos de carbono disponibles) y fat (grasa total).
 Si la tabla solo trae valores por porción, conviértelos a 100 g usando los gramos de la porción.

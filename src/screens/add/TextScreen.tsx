@@ -35,7 +35,7 @@ export default function TextScreen() {
     setError('');
     try {
       const items = await estimateFromText(ai.config, text.trim());
-      setDraft({ date, slot: slot!, name: nameFromText(text), items, source: 'text' });
+      setDraft({ date, slot: slot!, name: nameFromText(text), items, source: 'text', context: { text: text.trim() } });
       navigate('/revision');
     } catch (e) {
       setError(aiErrorMessage(e instanceof AiError ? e.kind : 'unknown'));

@@ -10,6 +10,8 @@ export type Draft = {
   source: EntrySource;
   steps?: string[];
   entryId?: string;
+  /** Lo que vio la IA, para poder corregir. Vive solo en memoria; nunca se guarda. */
+  context?: { photoB64?: string; text?: string };
 };
 
 type DraftApi = {

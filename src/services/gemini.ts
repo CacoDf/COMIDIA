@@ -2,7 +2,7 @@ import { z } from 'zod';
 import type { Item, Macros, MealSlot } from '../domain/types';
 import { MacrosSchema } from '../domain/schemas';
 import {
-  ITEMS_SCHEMA, LABEL_PROMPT, LABEL_SCHEMA, photoPrompt, suggestPrompt, SUGGESTIONS_SCHEMA, textPrompt,
+  ITEMS_SCHEMA, LABEL_PROMPT, LABEL_SCHEMA, photoPrompt, refinePrompt, suggestPrompt, SUGGESTIONS_SCHEMA, textPrompt,
 } from './geminiPrompts';
 
 const API = 'https://generativelanguage.googleapis.com/v1beta';
@@ -145,6 +145,16 @@ export async function estimateFromText(cfg: AiConfig, text: string): Promise<Ite
 
 export async function estimateFromPhoto(cfg: AiConfig, jpegBase64: string, note?: string): Promise<Item[]> {
   const parts = [{ text: photoPrompt(note) }, { inlineData: { mimeType: 'image/jpeg', data: jpegBase64 } }];
+  return itemsOrNoFood(await generate(cfg, parts, ITEMS_SCHEMA, ItemsResponse));
+}
+
+/** Rehace la estimación con la corrección del usuario ("faltó la mayonesa", "no tiene queso"). */
+export async function refineEstimate(
+  cfg: AiConfig,
+  req: { items: Item[]; correction: string; photoB64?: string; text?: string },
+): Promise<Item[]> {
+  const parts: unknown[] = [{ text: refinePrompt({ items: req.items, correction: req.correction, text: req.text, hasPhoto: !!req.photoB64 }) }];
+  if (req.photoB64) parts.push({ inlineData: { mimeType: 'image/jpeg', data: req.photoB64 } });
   return itemsOrNoFood(await generate(cfg, parts, ITEMS_SCHEMA, ItemsResponse));
 }
 

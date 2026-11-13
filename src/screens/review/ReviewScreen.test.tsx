@@ -5,7 +5,9 @@ import ReviewScreen from './ReviewScreen';
 import { DraftProvider, type Draft } from '../../state/DraftContext';
 import { ToastProvider } from '../../ui/Toast';
 import { resetDb } from '../../db/db';
-import { addEntry, listEntries, listSavedMeals } from '../../db/repo';
+import { addEntry, listEntries, listSavedMeals, patchSettings } from '../../db/repo';
+import { AiError } from '../../services/gemini';
+import * as gemini from '../../services/gemini';
 import { todayLocal } from '../../domain/dates';
 
 const today = todayLocal();
@@ -36,6 +38,7 @@ function renderReview(draft?: Draft) {
 
 beforeEach(async () => {
   await resetDb();
+  vi.restoreAllMocks();
 });
 
 test('muestra ingredientes y total, y guardar sin cambios es un toque', async () => {
@@ -113,4 +116,47 @@ test('editar una entrada existente la actualiza en vez de duplicarla', async () 
 test('sin borrador vuelve a Hoy', async () => {
   renderReview();
   expect(await screen.findByTestId('where')).toHaveTextContent(/^\/$/);
+});
+
+describe('corregir resultados', () => {
+  test('la corrección recalcula con la foto y reemplaza los ingredientes', async () => {
+    const user = userEvent.setup();
+    await patchSettings({ geminiKey: 'K', geminiModel: 'm' });
+    const mayo = { name: 'Mayonesa', grams: 15, macros: { kcal: 100, protein: 0, carbs: 0, fat: 11 } };
+    const spy = vi.spyOn(gemini, 'refineEstimate').mockResolvedValue([huevo, pan, mayo]);
+    renderReview({ ...baseDraft, source: 'photo', context: { photoB64: 'FOTO' } });
+    await user.type(await screen.findByLabelText('¿Qué hay que corregir?'), 'faltó la mayonesa');
+    await user.click(screen.getByRole('button', { name: 'Corregir' }));
+    expect(await screen.findByRole('button', { name: /Mayonesa/ })).toBeInTheDocument();
+    expect(spy).toHaveBeenCalledWith({ key: 'K', model: 'm' }, { items: [huevo, pan], correction: 'faltó la mayonesa', photoB64: 'FOTO' });
+    expect(screen.getByRole('region', { name: 'Total' })).toHaveTextContent('520 kcal');
+    expect(screen.getByLabelText('¿Qué hay que corregir?')).toHaveValue('');
+  });
+
+  test('si la corrección falla conserva lo escrito y los ingredientes', async () => {
+    const user = userEvent.setup();
+    await patchSettings({ geminiKey: 'K', geminiModel: 'm' });
+    vi.spyOn(gemini, 'refineEstimate').mockRejectedValue(new AiError('quota'));
+    renderReview({ ...baseDraft, context: { text: '2 huevos y marraqueta' } });
+    await user.type(await screen.findByLabelText('¿Qué hay que corregir?'), 'no tiene pan');
+    await user.click(screen.getByRole('button', { name: 'Corregir' }));
+    expect(await screen.findByRole('alert')).toHaveTextContent(/cuota gratis/);
+    expect(screen.getByLabelText('¿Qué hay que corregir?')).toHaveValue('no tiene pan');
+    expect(screen.getByRole('button', { name: /Marraqueta/ })).toBeInTheDocument();
+  });
+
+  test('sin key no aparece la corrección', async () => {
+    renderReview(baseDraft);
+    await screen.findByRole('button', { name: /Huevo revuelto/ });
+    expect(screen.queryByLabelText('¿Qué hay que corregir?')).not.toBeInTheDocument();
+  });
+
+  test('los gramos se editan directo en la fila', async () => {
+    const user = userEvent.setup();
+    renderReview(baseDraft);
+    const g = await screen.findByLabelText('Gramos de Huevo revuelto');
+    await user.clear(g);
+    await user.type(g, '150');
+    await waitFor(() => expect(screen.getByRole('region', { name: 'Total' })).toHaveTextContent('495 kcal'));
+  });
 });
