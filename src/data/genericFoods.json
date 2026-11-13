@@ -1,0 +1,5836 @@
+[
+ {
+  "id": "gen:171688",
+  "name": "Manzana",
+  "per100": {
+   "kcal": 52,
+   "protein": 0.3,
+   "carbs": 13.8,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 180
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173944",
+  "name": "Plátano",
+  "per100": {
+   "kcal": 89,
+   "protein": 1.1,
+   "carbs": 22.8,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169097",
+  "name": "Naranja",
+  "per100": {
+   "kcal": 47,
+   "protein": 0.9,
+   "carbs": 11.8,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169105",
+  "name": "Mandarina",
+  "per100": {
+   "kcal": 53,
+   "protein": 0.8,
+   "carbs": 13.3,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 75
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169118",
+  "name": "Pera",
+  "per100": {
+   "kcal": 57,
+   "protein": 0.4,
+   "carbs": 15.2,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 180
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174683",
+  "name": "Uvas",
+  "per100": {
+   "kcal": 69,
+   "protein": 0.7,
+   "carbs": 18.1,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167762",
+  "name": "Frutillas",
+  "per100": {
+   "kcal": 32,
+   "protein": 0.7,
+   "carbs": 7.7,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171711",
+  "name": "Arándanos",
+  "per100": {
+   "kcal": 57,
+   "protein": 0.7,
+   "carbs": 14.5,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167755",
+  "name": "Frambuesas",
+  "per100": {
+   "kcal": 52,
+   "protein": 1.2,
+   "carbs": 11.9,
+   "fat": 0.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173946",
+  "name": "Moras",
+  "per100": {
+   "kcal": 43,
+   "protein": 1.4,
+   "carbs": 9.6,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 145
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168153",
+  "name": "Kiwi",
+  "per100": {
+   "kcal": 61,
+   "protein": 1.1,
+   "carbs": 14.7,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 75
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169124",
+  "name": "Piña",
+  "per100": {
+   "kcal": 50,
+   "protein": 0.5,
+   "carbs": 13.1,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 165
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169910",
+  "name": "Mango",
+  "per100": {
+   "kcal": 60,
+   "protein": 0.8,
+   "carbs": 15,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169926",
+  "name": "Papaya",
+  "per100": {
+   "kcal": 43,
+   "protein": 0.5,
+   "carbs": 10.8,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 145
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167765",
+  "name": "Sandía",
+  "per100": {
+   "kcal": 30,
+   "protein": 0.6,
+   "carbs": 7.6,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169911",
+  "name": "Melón calameño",
+  "per100": {
+   "kcal": 36,
+   "protein": 0.5,
+   "carbs": 9.1,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 170
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169092",
+  "name": "Melón tuna",
+  "per100": {
+   "kcal": 34,
+   "protein": 0.8,
+   "carbs": 8.2,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 160
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169928",
+  "name": "Durazno",
+  "per100": {
+   "kcal": 39,
+   "protein": 0.9,
+   "carbs": 9.5,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171697",
+  "name": "Damasco",
+  "per100": {
+   "kcal": 48,
+   "protein": 1.4,
+   "carbs": 11.1,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 35
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169949",
+  "name": "Ciruela",
+  "per100": {
+   "kcal": 46,
+   "protein": 0.7,
+   "carbs": 11.4,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 66
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171719",
+  "name": "Cerezas",
+  "per100": {
+   "kcal": 63,
+   "protein": 1.1,
+   "carbs": 16,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167746",
+  "name": "Limón",
+  "per100": {
+   "kcal": 29,
+   "protein": 1.1,
+   "carbs": 9.3,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 60
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174673",
+  "name": "Pomelo",
+  "per100": {
+   "kcal": 42,
+   "protein": 0.8,
+   "carbs": 10.7,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad media",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173953",
+  "name": "Chirimoya",
+  "per100": {
+   "kcal": 75,
+   "protein": 1.6,
+   "carbs": 17.7,
+   "fat": 0.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 300
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173021",
+  "name": "Higo",
+  "per100": {
+   "kcal": 74,
+   "protein": 0.8,
+   "carbs": 19.2,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 50
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169134",
+  "name": "Granada",
+  "per100": {
+   "kcal": 83,
+   "protein": 1.7,
+   "carbs": 18.7,
+   "fat": 1.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 280
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168163",
+  "name": "Membrillo",
+  "per100": {
+   "kcal": 57,
+   "protein": 0.4,
+   "carbs": 15.3,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 90
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171705",
+  "name": "Palta",
+  "per100": {
+   "kcal": 160,
+   "protein": 2,
+   "carbs": 8.5,
+   "fat": 14.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 150
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170170",
+  "name": "Coco rallado",
+  "per100": {
+   "kcal": 660,
+   "protein": 6.9,
+   "carbs": 23.7,
+   "fat": 64.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168164",
+  "name": "Pasas",
+  "per100": {
+   "kcal": 301,
+   "protein": 3.3,
+   "carbs": 80,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168162",
+  "name": "Ciruelas secas",
+  "per100": {
+   "kcal": 240,
+   "protein": 2.2,
+   "carbs": 63.9,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168191",
+  "name": "Dátiles",
+  "per100": {
+   "kcal": 277,
+   "protein": 1.8,
+   "carbs": 75,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 24
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173941",
+  "name": "Damascos secos",
+  "per100": {
+   "kcal": 241,
+   "protein": 3.4,
+   "carbs": 62.6,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 7
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170457",
+  "name": "Tomate",
+  "per100": {
+   "kcal": 18,
+   "protein": 0.9,
+   "carbs": 3.9,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169249",
+  "name": "Lechuga",
+  "per100": {
+   "kcal": 15,
+   "protein": 1.4,
+   "carbs": 2.9,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 36
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169248",
+  "name": "Lechuga escarola",
+  "per100": {
+   "kcal": 14,
+   "protein": 0.9,
+   "carbs": 3,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 55
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168462",
+  "name": "Espinaca cruda",
+  "per100": {
+   "kcal": 23,
+   "protein": 2.9,
+   "carbs": 3.6,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168463",
+  "name": "Espinaca cocida",
+  "per100": {
+   "kcal": 23,
+   "protein": 3,
+   "carbs": 3.8,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 180
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170401",
+  "name": "Acelga cocida",
+  "per100": {
+   "kcal": 20,
+   "protein": 1.9,
+   "carbs": 4.1,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 175
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170393",
+  "name": "Zanahoria",
+  "per100": {
+   "kcal": 41,
+   "protein": 0.9,
+   "carbs": 9.6,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 60
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170394",
+  "name": "Zanahoria cocida",
+  "per100": {
+   "kcal": 35,
+   "protein": 0.8,
+   "carbs": 8.2,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 155
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170000",
+  "name": "Cebolla",
+  "per100": {
+   "kcal": 40,
+   "protein": 1.1,
+   "carbs": 9.3,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 110
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170005",
+  "name": "Cebollín",
+  "per100": {
+   "kcal": 32,
+   "protein": 1.8,
+   "carbs": 7.3,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169230",
+  "name": "Ajo",
+  "per100": {
+   "kcal": 149,
+   "protein": 6.4,
+   "carbs": 33.1,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "diente",
+    "grams": 3
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168409",
+  "name": "Pepino",
+  "per100": {
+   "kcal": 15,
+   "protein": 0.7,
+   "carbs": 3.6,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170108",
+  "name": "Pimentón rojo",
+  "per100": {
+   "kcal": 26,
+   "protein": 1,
+   "carbs": 6,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170427",
+  "name": "Pimentón verde",
+  "per100": {
+   "kcal": 20,
+   "protein": 0.9,
+   "carbs": 4.6,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170497",
+  "name": "Ají verde",
+  "per100": {
+   "kcal": 40,
+   "protein": 2,
+   "carbs": 9.5,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 45
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169291",
+  "name": "Zapallo italiano",
+  "per100": {
+   "kcal": 17,
+   "protein": 1.2,
+   "carbs": 3.1,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169292",
+  "name": "Zapallo italiano cocido",
+  "per100": {
+   "kcal": 15,
+   "protein": 1.1,
+   "carbs": 2.7,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 180
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169295",
+  "name": "Zapallo",
+  "per100": {
+   "kcal": 45,
+   "protein": 1,
+   "carbs": 11.7,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169296",
+  "name": "Zapallo cocido",
+  "per100": {
+   "kcal": 40,
+   "protein": 0.9,
+   "carbs": 10.5,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 205
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170379",
+  "name": "Brócoli",
+  "per100": {
+   "kcal": 34,
+   "protein": 2.8,
+   "carbs": 6.6,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 90
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169967",
+  "name": "Brócoli cocido",
+  "per100": {
+   "kcal": 35,
+   "protein": 2.4,
+   "carbs": 7.2,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 155
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169986",
+  "name": "Coliflor",
+  "per100": {
+   "kcal": 25,
+   "protein": 1.9,
+   "carbs": 5,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 107
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170397",
+  "name": "Coliflor cocida",
+  "per100": {
+   "kcal": 23,
+   "protein": 1.8,
+   "carbs": 4.1,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169975",
+  "name": "Repollo",
+  "per100": {
+   "kcal": 25,
+   "protein": 1.3,
+   "carbs": 5.8,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 89
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169977",
+  "name": "Repollo morado",
+  "per100": {
+   "kcal": 31,
+   "protein": 1.4,
+   "carbs": 7.4,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 89
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169146",
+  "name": "Betarraga cocida",
+  "per100": {
+   "kcal": 44,
+   "protein": 1.7,
+   "carbs": 10,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 50
+   },
+   {
+    "label": "taza",
+    "grams": 170
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169999",
+  "name": "Choclo",
+  "per100": {
+   "kcal": 96,
+   "protein": 3.4,
+   "carbs": 21,
+   "fat": 1.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 165
+   },
+   {
+    "label": "unidad",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169214",
+  "name": "Choclo en lata",
+  "per100": {
+   "kcal": 67,
+   "protein": 2.3,
+   "carbs": 14.3,
+   "fat": 1.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 165
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170017",
+  "name": "Arvejas",
+  "per100": {
+   "kcal": 78,
+   "protein": 5.2,
+   "carbs": 14.3,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 160
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169141",
+  "name": "Porotos verdes",
+  "per100": {
+   "kcal": 35,
+   "protein": 1.9,
+   "carbs": 7.9,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169251",
+  "name": "Champiñones",
+  "per100": {
+   "kcal": 22,
+   "protein": 3.1,
+   "carbs": 3.3,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 70
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169252",
+  "name": "Champiñones cocidos",
+  "per100": {
+   "kcal": 28,
+   "protein": 2.2,
+   "carbs": 5.3,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 156
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169988",
+  "name": "Apio",
+  "per100": {
+   "kcal": 14,
+   "protein": 0.7,
+   "carbs": 3,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "tallo",
+    "grams": 40
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168390",
+  "name": "Espárragos",
+  "per100": {
+   "kcal": 22,
+   "protein": 2.4,
+   "carbs": 4.1,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168386",
+  "name": "Alcachofa cocida",
+  "per100": {
+   "kcal": 53,
+   "protein": 2.9,
+   "carbs": 12,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169228",
+  "name": "Berenjena",
+  "per100": {
+   "kcal": 25,
+   "protein": 1,
+   "carbs": 5.9,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 82
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169276",
+  "name": "Rabanitos",
+  "per100": {
+   "kcal": 16,
+   "protein": 0.7,
+   "carbs": 3.4,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169387",
+  "name": "Rúcula",
+  "per100": {
+   "kcal": 25,
+   "protein": 2.6,
+   "carbs": 3.7,
+   "fat": 0.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168421",
+  "name": "Kale",
+  "per100": {
+   "kcal": 35,
+   "protein": 2.9,
+   "carbs": 4.4,
+   "fat": 1.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170440",
+  "name": "Papa cocida",
+  "per100": {
+   "kcal": 86,
+   "protein": 1.7,
+   "carbs": 20,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 170
+   },
+   {
+    "label": "taza",
+    "grams": 156
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170093",
+  "name": "Papa al horno",
+  "per100": {
+   "kcal": 93,
+   "protein": 2.5,
+   "carbs": 21.2,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad mediana",
+    "grams": 170
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169264",
+  "name": "Papas fritas",
+  "per100": {
+   "kcal": 158,
+   "protein": 2.8,
+   "carbs": 25.6,
+   "fat": 5.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170037",
+  "name": "Puré de papas",
+  "per100": {
+   "kcal": 113,
+   "protein": 2,
+   "carbs": 16.9,
+   "fat": 4.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 210
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168484",
+  "name": "Camote cocido",
+  "per100": {
+   "kcal": 76,
+   "protein": 1.4,
+   "carbs": 17.7,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168483",
+  "name": "Camote al horno",
+  "per100": {
+   "kcal": 90,
+   "protein": 2,
+   "carbs": 20.7,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168878",
+  "name": "Arroz blanco cocido",
+  "per100": {
+   "kcal": 130,
+   "protein": 2.7,
+   "carbs": 28.2,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 160
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169704",
+  "name": "Arroz integral cocido",
+  "per100": {
+   "kcal": 123,
+   "protein": 2.7,
+   "carbs": 25.6,
+   "fat": 1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 195
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168877",
+  "name": "Arroz blanco crudo",
+  "per100": {
+   "kcal": 365,
+   "protein": 7.1,
+   "carbs": 80,
+   "fat": 0.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 185
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169737",
+  "name": "Fideos cocidos",
+  "per100": {
+   "kcal": 158,
+   "protein": 5.8,
+   "carbs": 30.9,
+   "fat": 0.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169736",
+  "name": "Fideos crudos",
+  "per100": {
+   "kcal": 371,
+   "protein": 13,
+   "carbs": 74.7,
+   "fat": 1.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 80
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168910",
+  "name": "Fideos integrales cocidos",
+  "per100": {
+   "kcal": 149,
+   "protein": 6,
+   "carbs": 30.1,
+   "fat": 1.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168917",
+  "name": "Quínoa cocida",
+  "per100": {
+   "kcal": 120,
+   "protein": 4.4,
+   "carbs": 21.3,
+   "fat": 1.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 185
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173904",
+  "name": "Avena",
+  "per100": {
+   "kcal": 379,
+   "protein": 13.2,
+   "carbs": 67.7,
+   "fat": 6.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 80
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173905",
+  "name": "Avena cocida con agua",
+  "per100": {
+   "kcal": 71,
+   "protein": 2.5,
+   "carbs": 12,
+   "fat": 1.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 235
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169700",
+  "name": "Cuscús cocido",
+  "per100": {
+   "kcal": 112,
+   "protein": 3.8,
+   "carbs": 23.2,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 157
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168894",
+  "name": "Harina de trigo",
+  "per100": {
+   "kcal": 364,
+   "protein": 10.3,
+   "carbs": 76.3,
+   "fat": 1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 125
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168944",
+  "name": "Harina integral",
+  "per100": {
+   "kcal": 332,
+   "protein": 9.6,
+   "carbs": 74.5,
+   "fat": 2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169698",
+  "name": "Maicena",
+  "per100": {
+   "kcal": 381,
+   "protein": 0.3,
+   "carbs": 91.3,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168867",
+  "name": "Polenta (sémola de maíz)",
+  "per100": {
+   "kcal": 370,
+   "protein": 7.1,
+   "carbs": 79.5,
+   "fat": 1.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 157
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170287",
+  "name": "Mote de trigo cocido",
+  "per100": {
+   "kcal": 83,
+   "protein": 3.1,
+   "carbs": 18.6,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 180
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174924",
+  "name": "Pan de molde blanco",
+  "per100": {
+   "kcal": 266,
+   "protein": 8.9,
+   "carbs": 49.4,
+   "fat": 3.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "rebanada",
+    "grams": 25
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172688",
+  "name": "Pan de molde integral",
+  "per100": {
+   "kcal": 252,
+   "protein": 12.5,
+   "carbs": 42.7,
+   "fat": 3.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "rebanada",
+    "grams": 28
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172675",
+  "name": "Marraqueta",
+  "per100": {
+   "kcal": 272,
+   "protein": 10.8,
+   "carbs": 51.9,
+   "fat": 2.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 100
+   },
+   {
+    "label": "media",
+    "grams": 50
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172686",
+  "name": "Hallulla",
+  "per100": {
+   "kcal": 274,
+   "protein": 10.7,
+   "carbs": 47.5,
+   "fat": 4.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 90
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174915",
+  "name": "Pan pita",
+  "per100": {
+   "kcal": 275,
+   "protein": 9.1,
+   "carbs": 55.7,
+   "fat": 1.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 60
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175037",
+  "name": "Tortilla de harina",
+  "per100": {
+   "kcal": 306,
+   "protein": 8.2,
+   "carbs": 49.4,
+   "fat": 8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 45
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175036",
+  "name": "Tortilla de maíz",
+  "per100": {
+   "kcal": 218,
+   "protein": 5.7,
+   "carbs": 44.6,
+   "fat": 2.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 26
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172746",
+  "name": "Galletas de agua",
+  "per100": {
+   "kcal": 418,
+   "protein": 9.5,
+   "carbs": 74.1,
+   "fat": 8.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 3
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174982",
+  "name": "Galletas de soda",
+  "per100": {
+   "kcal": 510,
+   "protein": 6.6,
+   "carbs": 61.3,
+   "fat": 26.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 3
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174925",
+  "name": "Tostadas",
+  "per100": {
+   "kcal": 290,
+   "protein": 9,
+   "carbs": 54.5,
+   "fat": 4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 22
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174928",
+  "name": "Pan rallado",
+  "per100": {
+   "kcal": 395,
+   "protein": 13.4,
+   "carbs": 72,
+   "fat": 5.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 7
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174648",
+  "name": "Corn flakes",
+  "per100": {
+   "kcal": 384,
+   "protein": 5.9,
+   "carbs": 88,
+   "fat": 0.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 28
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171646",
+  "name": "Granola",
+  "per100": {
+   "kcal": 489,
+   "protein": 13.7,
+   "carbs": 53.9,
+   "fat": 24.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 120
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172716",
+  "name": "Galletas de chocolate",
+  "per100": {
+   "kcal": 492,
+   "protein": 5.1,
+   "carbs": 65.4,
+   "fat": 24.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174973",
+  "name": "Galletas de vino",
+  "per100": {
+   "kcal": 441,
+   "protein": 5,
+   "carbs": 73.6,
+   "fat": 15.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172704",
+  "name": "Queque",
+  "per100": {
+   "kcal": 353,
+   "protein": 5,
+   "carbs": 53.6,
+   "fat": 14
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "trozo",
+    "grams": 60
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174934",
+  "name": "Torta de chocolate",
+  "per100": {
+   "kcal": 389,
+   "protein": 3.5,
+   "carbs": 52.8,
+   "fat": 20.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "trozo",
+    "grams": 80
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175009",
+  "name": "Panqueques",
+  "per100": {
+   "kcal": 227,
+   "protein": 6.4,
+   "carbs": 28.3,
+   "fat": 9.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 40
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171477",
+  "name": "Pechuga de pollo cocida",
+  "per100": {
+   "kcal": 165,
+   "protein": 31,
+   "carbs": 0,
+   "fat": 3.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 170
+   },
+   {
+    "label": "filete",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171077",
+  "name": "Pechuga de pollo cruda",
+  "per100": {
+   "kcal": 120,
+   "protein": 22.5,
+   "carbs": 0,
+   "fat": 2.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172388",
+  "name": "Pollo trutro cocido",
+  "per100": {
+   "kcal": 179,
+   "protein": 24.8,
+   "carbs": 0,
+   "fat": 8.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173625",
+  "name": "Pollo trutro con piel",
+  "per100": {
+   "kcal": 232,
+   "protein": 23.3,
+   "carbs": 0,
+   "fat": 14.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 130
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173630",
+  "name": "Pollo ala",
+  "per100": {
+   "kcal": 254,
+   "protein": 23.8,
+   "carbs": 0,
+   "fat": 16.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 35
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171450",
+  "name": "Pollo asado entero",
+  "per100": {
+   "kcal": 239,
+   "protein": 27.3,
+   "carbs": 0,
+   "fat": 13.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171496",
+  "name": "Pechuga de pavo cocida",
+  "per100": {
+   "kcal": 147,
+   "protein": 30.1,
+   "carbs": 0,
+   "fat": 2.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171794",
+  "name": "Carne molida 10% grasa cocida",
+  "per100": {
+   "kcal": 230,
+   "protein": 28.5,
+   "carbs": 0,
+   "fat": 12
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174028",
+  "name": "Carne molida 5% grasa cocida",
+  "per100": {
+   "kcal": 193,
+   "protein": 29.2,
+   "carbs": 0,
+   "fat": 7.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171799",
+  "name": "Carne molida 20% grasa cocida",
+  "per100": {
+   "kcal": 272,
+   "protein": 27,
+   "carbs": 0,
+   "fat": 17.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174030",
+  "name": "Carne molida 10% cruda",
+  "per100": {
+   "kcal": 176,
+   "protein": 20,
+   "carbs": 0,
+   "fat": 10
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171808",
+  "name": "Bistec de vacuno (posta)",
+  "per100": {
+   "kcal": 177,
+   "protein": 31.6,
+   "carbs": 0,
+   "fat": 4.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bistec",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170220",
+  "name": "Lomo vetado",
+  "per100": {
+   "kcal": 312,
+   "protein": 24.7,
+   "carbs": 0,
+   "fat": 22.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bistec",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168718",
+  "name": "Lomo liso",
+  "per100": {
+   "kcal": 278,
+   "protein": 26.2,
+   "carbs": 0,
+   "fat": 18.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bistec",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171811",
+  "name": "Filete de vacuno",
+  "per100": {
+   "kcal": 200,
+   "protein": 29,
+   "carbs": 0,
+   "fat": 8.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bistec",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171223",
+  "name": "Asado de tira",
+  "per100": {
+   "kcal": 317,
+   "protein": 25.3,
+   "carbs": 0,
+   "fat": 24.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170613",
+  "name": "Plateada",
+  "per100": {
+   "kcal": 213,
+   "protein": 32.9,
+   "carbs": 0,
+   "fat": 8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167831",
+  "name": "Cerdo chuleta",
+  "per100": {
+   "kcal": 222,
+   "protein": 24.4,
+   "carbs": 0,
+   "fat": 13
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168250",
+  "name": "Cerdo lomo",
+  "per100": {
+   "kcal": 143,
+   "protein": 26.2,
+   "carbs": 0,
+   "fat": 3.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167854",
+  "name": "Costillar de cerdo",
+  "per100": {
+   "kcal": 397,
+   "protein": 29.1,
+   "carbs": 0,
+   "fat": 30.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168322",
+  "name": "Tocino",
+  "per100": {
+   "kcal": 468,
+   "protein": 33.9,
+   "carbs": 1.7,
+   "fat": 35.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168092",
+  "name": "Jamón de pavo",
+  "per100": {
+   "kcal": 134,
+   "protein": 19.6,
+   "carbs": 0.9,
+   "fat": 5.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173864",
+  "name": "Jamón de cerdo",
+  "per100": {
+   "kcal": 164,
+   "protein": 16.6,
+   "carbs": 3.6,
+   "fat": 8.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172936",
+  "name": "Salame",
+  "per100": {
+   "kcal": 336,
+   "protein": 21.9,
+   "carbs": 2.4,
+   "fat": 25.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174614",
+  "name": "Vienesa",
+  "per100": {
+   "kcal": 322,
+   "protein": 11.7,
+   "carbs": 2.7,
+   "fat": 29.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 45
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173859",
+  "name": "Longaniza",
+  "per100": {
+   "kcal": 296,
+   "protein": 13.6,
+   "carbs": 3.8,
+   "fat": 25.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 80
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171797",
+  "name": "Hamburguesa de vacuno",
+  "per100": {
+   "kcal": 270,
+   "protein": 25.8,
+   "carbs": 0,
+   "fat": 17.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 90
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172485",
+  "name": "Cordero",
+  "per100": {
+   "kcal": 225,
+   "protein": 26.4,
+   "carbs": 0,
+   "fat": 12.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168627",
+  "name": "Hígado de vacuno",
+  "per100": {
+   "kcal": 175,
+   "protein": 26.5,
+   "carbs": 5.2,
+   "fat": 4.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175168",
+  "name": "Salmón cocido",
+  "per100": {
+   "kcal": 206,
+   "protein": 22.1,
+   "carbs": 0,
+   "fat": 12.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175167",
+  "name": "Salmón crudo",
+  "per100": {
+   "kcal": 208,
+   "protein": 20.4,
+   "carbs": 0,
+   "fat": 13.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173687",
+  "name": "Salmón ahumado",
+  "per100": {
+   "kcal": 117,
+   "protein": 18.3,
+   "carbs": 0,
+   "fat": 4.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171986",
+  "name": "Atún en agua",
+  "per100": {
+   "kcal": 116,
+   "protein": 25.5,
+   "carbs": 0,
+   "fat": 0.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lata escurrida",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173708",
+  "name": "Atún en aceite",
+  "per100": {
+   "kcal": 198,
+   "protein": 29.1,
+   "carbs": 0,
+   "fat": 8.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lata escurrida",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175161",
+  "name": "Merluza cocida",
+  "per100": {
+   "kcal": 116,
+   "protein": 23.5,
+   "carbs": 0,
+   "fat": 1.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174237",
+  "name": "Reineta cocida",
+  "per100": {
+   "kcal": 118,
+   "protein": 24.9,
+   "carbs": 0,
+   "fat": 1.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175121",
+  "name": "Jurel en lata",
+  "per100": {
+   "kcal": 156,
+   "protein": 23.2,
+   "carbs": 0,
+   "fat": 6.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lata escurrida",
+    "grams": 300
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175139",
+  "name": "Sardinas en aceite",
+  "per100": {
+   "kcal": 208,
+   "protein": 24.6,
+   "carbs": 0,
+   "fat": 11.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 12
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175177",
+  "name": "Tilapia cocida",
+  "per100": {
+   "kcal": 128,
+   "protein": 26.2,
+   "carbs": 0,
+   "fat": 2.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 120
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173694",
+  "name": "Corvina cocida",
+  "per100": {
+   "kcal": 124,
+   "protein": 23.6,
+   "carbs": 0,
+   "fat": 2.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "filete",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175180",
+  "name": "Camarones cocidos",
+  "per100": {
+   "kcal": 99,
+   "protein": 24,
+   "carbs": 0.2,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 85
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174217",
+  "name": "Choritos cocidos",
+  "per100": {
+   "kcal": 172,
+   "protein": 23.8,
+   "carbs": 7.4,
+   "fat": 4.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 85
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171975",
+  "name": "Almejas cocidas",
+  "per100": {
+   "kcal": 148,
+   "protein": 25.6,
+   "carbs": 5.1,
+   "fat": 2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 85
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171982",
+  "name": "Calamar frito",
+  "per100": {
+   "kcal": 175,
+   "protein": 17.9,
+   "carbs": 7.8,
+   "fat": 7.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 85
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174249",
+  "name": "Pulpo cocido",
+  "per100": {
+   "kcal": 164,
+   "protein": 29.8,
+   "carbs": 4.4,
+   "fat": 2.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 85
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171287",
+  "name": "Huevo",
+  "per100": {
+   "kcal": 143,
+   "protein": 12.6,
+   "carbs": 0.7,
+   "fat": 9.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 50
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173424",
+  "name": "Huevo duro",
+  "per100": {
+   "kcal": 155,
+   "protein": 12.6,
+   "carbs": 1.1,
+   "fat": 10.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 50
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173423",
+  "name": "Huevo frito",
+  "per100": {
+   "kcal": 196,
+   "protein": 13.6,
+   "carbs": 0.8,
+   "fat": 14.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 46
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172187",
+  "name": "Huevo revuelto",
+  "per100": {
+   "kcal": 149,
+   "protein": 10,
+   "carbs": 1.6,
+   "fat": 11
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 61
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172183",
+  "name": "Clara de huevo",
+  "per100": {
+   "kcal": 52,
+   "protein": 10.9,
+   "carbs": 0.7,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 33
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172184",
+  "name": "Yema de huevo",
+  "per100": {
+   "kcal": 322,
+   "protein": 15.9,
+   "carbs": 3.6,
+   "fat": 26.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 17
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171265",
+  "name": "Leche entera",
+  "per100": {
+   "kcal": 61,
+   "protein": 3.2,
+   "carbs": 4.8,
+   "fat": 3.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 200
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171267",
+  "name": "Leche semidescremada",
+  "per100": {
+   "kcal": 50,
+   "protein": 3.3,
+   "carbs": 4.8,
+   "fat": 2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 200
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171269",
+  "name": "Leche descremada",
+  "per100": {
+   "kcal": 34,
+   "protein": 3.4,
+   "carbs": 5,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 200
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170876",
+  "name": "Leche en polvo entera",
+  "per100": {
+   "kcal": 496,
+   "protein": 26.3,
+   "carbs": 38.4,
+   "fat": 26.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170877",
+  "name": "Leche en polvo descremada",
+  "per100": {
+   "kcal": 362,
+   "protein": 36.2,
+   "carbs": 52,
+   "fat": 0.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 7
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171275",
+  "name": "Leche condensada",
+  "per100": {
+   "kcal": 321,
+   "protein": 7.9,
+   "carbs": 54.4,
+   "fat": 8.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171276",
+  "name": "Leche evaporada",
+  "per100": {
+   "kcal": 134,
+   "protein": 6.8,
+   "carbs": 10,
+   "fat": 7.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 16
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170880",
+  "name": "Leche chocolatada",
+  "per100": {
+   "kcal": 76,
+   "protein": 3,
+   "carbs": 12.1,
+   "fat": 1.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "caja",
+    "grams": 200
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171284",
+  "name": "Yogur natural",
+  "per100": {
+   "kcal": 61,
+   "protein": 3.5,
+   "carbs": 4.7,
+   "fat": 3.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170887",
+  "name": "Yogur natural descremado",
+  "per100": {
+   "kcal": 56,
+   "protein": 5.7,
+   "carbs": 7.7,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173456",
+  "name": "Yogur con frutas",
+  "per100": {
+   "kcal": 99,
+   "protein": 4,
+   "carbs": 18.6,
+   "fat": 1.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 125
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170894",
+  "name": "Yogur griego natural",
+  "per100": {
+   "kcal": 59,
+   "protein": 10.2,
+   "carbs": 3.6,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171304",
+  "name": "Yogur griego entero",
+  "per100": {
+   "kcal": 97,
+   "protein": 9,
+   "carbs": 4,
+   "fat": 5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171241",
+  "name": "Queso gauda",
+  "per100": {
+   "kcal": 356,
+   "protein": 24.9,
+   "carbs": 2.2,
+   "fat": 27.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170844",
+  "name": "Queso mantecoso",
+  "per100": {
+   "kcal": 373,
+   "protein": 24.5,
+   "carbs": 0.7,
+   "fat": 30.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173416",
+  "name": "Queso chanco",
+  "per100": {
+   "kcal": 394,
+   "protein": 23.8,
+   "carbs": 2.6,
+   "fat": 32.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170899",
+  "name": "Queso cheddar",
+  "per100": {
+   "kcal": 410,
+   "protein": 24.3,
+   "carbs": 2.1,
+   "fat": 33.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170845",
+  "name": "Queso mozzarella",
+  "per100": {
+   "kcal": 299,
+   "protein": 22.2,
+   "carbs": 2.4,
+   "fat": 22.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lámina",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171247",
+  "name": "Queso parmesano",
+  "per100": {
+   "kcal": 420,
+   "protein": 28.4,
+   "carbs": 13.9,
+   "fat": 27.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172223",
+  "name": "Queso fresco",
+  "per100": {
+   "kcal": 299,
+   "protein": 18.1,
+   "carbs": 3,
+   "fat": 23.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171248",
+  "name": "Quesillo",
+  "per100": {
+   "kcal": 138,
+   "protein": 11.4,
+   "carbs": 5.1,
+   "fat": 7.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 60
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172182",
+  "name": "Queso cottage",
+  "per100": {
+   "kcal": 81,
+   "protein": 10.5,
+   "carbs": 4.8,
+   "fat": 2.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 225
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173418",
+  "name": "Queso crema",
+  "per100": {
+   "kcal": 350,
+   "protein": 6.2,
+   "carbs": 5.5,
+   "fat": 34.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173435",
+  "name": "Queso de cabra",
+  "per100": {
+   "kcal": 264,
+   "protein": 18.5,
+   "carbs": 0,
+   "fat": 21.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173430",
+  "name": "Mantequilla",
+  "per100": {
+   "kcal": 717,
+   "protein": 0.9,
+   "carbs": 0.1,
+   "fat": 81.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 5
+   },
+   {
+    "label": "cucharada",
+    "grams": 14
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172346",
+  "name": "Margarina",
+  "per100": {
+   "kcal": 717,
+   "protein": 0.2,
+   "carbs": 0.7,
+   "fat": 80.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170859",
+  "name": "Crema de leche",
+  "per100": {
+   "kcal": 340,
+   "protein": 2.8,
+   "carbs": 2.8,
+   "fat": 36.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171257",
+  "name": "Crema ácida",
+  "per100": {
+   "kcal": 198,
+   "protein": 2.4,
+   "carbs": 4.6,
+   "fat": 19.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 12
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167575",
+  "name": "Helado de vainilla",
+  "per100": {
+   "kcal": 207,
+   "protein": 3.5,
+   "carbs": 23.6,
+   "fat": 11
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bola",
+    "grams": 65
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168809",
+  "name": "Helado de chocolate",
+  "per100": {
+   "kcal": 216,
+   "protein": 3.8,
+   "carbs": 28.2,
+   "fat": 11
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bola",
+    "grams": 65
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171413",
+  "name": "Aceite de oliva",
+  "per100": {
+   "kcal": 884,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 100
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 4.5
+   },
+   {
+    "label": "cucharada",
+    "grams": 13.5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172336",
+  "name": "Aceite vegetal",
+  "per100": {
+   "kcal": 884,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 100
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 4.5
+   },
+   {
+    "label": "cucharada",
+    "grams": 14
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171025",
+  "name": "Aceite de maravilla",
+  "per100": {
+   "kcal": 884,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 100
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 14
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171009",
+  "name": "Mayonesa",
+  "per100": {
+   "kcal": 680,
+   "protein": 1,
+   "carbs": 0.6,
+   "fat": 74.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 14
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173594",
+  "name": "Mayonesa light",
+  "per100": {
+   "kcal": 238,
+   "protein": 0.4,
+   "carbs": 9.2,
+   "fat": 22.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168556",
+  "name": "Ketchup",
+  "per100": {
+   "kcal": 101,
+   "protein": 1,
+   "carbs": 27.4,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172234",
+  "name": "Mostaza",
+  "per100": {
+   "kcal": 60,
+   "protein": 3.7,
+   "carbs": 5.8,
+   "fat": 3.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174278",
+  "name": "Salsa de soya",
+  "per100": {
+   "kcal": 60,
+   "protein": 10.5,
+   "carbs": 5.6,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 18
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170054",
+  "name": "Salsa de tomate",
+  "per100": {
+   "kcal": 24,
+   "protein": 1.2,
+   "carbs": 5.3,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   },
+   {
+    "label": "taza",
+    "grams": 245
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170459",
+  "name": "Pasta de tomate",
+  "per100": {
+   "kcal": 82,
+   "protein": 4.3,
+   "carbs": 18.9,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 16
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171579",
+  "name": "Pesto",
+  "per100": {
+   "kcal": 418,
+   "protein": 9.8,
+   "carbs": 10.1,
+   "fat": 37.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 16
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173469",
+  "name": "Vinagre",
+  "per100": {
+   "kcal": 21,
+   "protein": 0,
+   "carbs": 0.9,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169655",
+  "name": "Azúcar",
+  "per100": {
+   "kcal": 387,
+   "protein": 0,
+   "carbs": 100,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 4
+   },
+   {
+    "label": "cucharada",
+    "grams": 12.5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169656",
+  "name": "Azúcar flor",
+  "per100": {
+   "kcal": 389,
+   "protein": 0,
+   "carbs": 99.8,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169640",
+  "name": "Miel",
+  "per100": {
+   "kcal": 304,
+   "protein": 0.3,
+   "carbs": 82.4,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharadita",
+    "grams": 7
+   },
+   {
+    "label": "cucharada",
+    "grams": 21
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169641",
+  "name": "Mermelada",
+  "per100": {
+   "kcal": 278,
+   "protein": 0.4,
+   "carbs": 68.9,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 20
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170273",
+  "name": "Chocolate amargo",
+  "per100": {
+   "kcal": 598,
+   "protein": 7.8,
+   "carbs": 45.9,
+   "fat": 42.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cuadrado",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167587",
+  "name": "Chocolate de leche",
+  "per100": {
+   "kcal": 535,
+   "protein": 7.7,
+   "carbs": 59.4,
+   "fat": 29.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "barra",
+    "grams": 40
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169593",
+  "name": "Cacao en polvo",
+  "per100": {
+   "kcal": 228,
+   "protein": 19.6,
+   "carbs": 57.9,
+   "fat": 13.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 5
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172470",
+  "name": "Mantequilla de maní",
+  "per100": {
+   "kcal": 598,
+   "protein": 22.2,
+   "carbs": 22.3,
+   "fat": 51.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 16
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173806",
+  "name": "Maní tostado",
+  "per100": {
+   "kcal": 587,
+   "protein": 24.4,
+   "carbs": 21.3,
+   "fat": 49.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170567",
+  "name": "Almendras",
+  "per100": {
+   "kcal": 579,
+   "protein": 21.2,
+   "carbs": 21.6,
+   "fat": 49.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 1.2
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170187",
+  "name": "Nueces",
+  "per100": {
+   "kcal": 654,
+   "protein": 15.2,
+   "carbs": 13.7,
+   "fat": 65.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "mitad",
+    "grams": 2.5
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170162",
+  "name": "Castañas de cajú",
+  "per100": {
+   "kcal": 553,
+   "protein": 18.2,
+   "carbs": 30.2,
+   "fat": 43.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170184",
+  "name": "Pistachos",
+  "per100": {
+   "kcal": 560,
+   "protein": 20.2,
+   "carbs": 27.2,
+   "fat": 45.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170581",
+  "name": "Avellanas",
+  "per100": {
+   "kcal": 628,
+   "protein": 15,
+   "carbs": 16.7,
+   "fat": 60.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170554",
+  "name": "Semillas de chía",
+  "per100": {
+   "kcal": 486,
+   "protein": 16.5,
+   "carbs": 42.1,
+   "fat": 30.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 12
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169414",
+  "name": "Linaza",
+  "per100": {
+   "kcal": 534,
+   "protein": 18.3,
+   "carbs": 28.9,
+   "fat": 42.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 10
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170562",
+  "name": "Semillas de maravilla",
+  "per100": {
+   "kcal": 584,
+   "protein": 20.8,
+   "carbs": 20,
+   "fat": 51.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 9
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170556",
+  "name": "Semillas de zapallo",
+  "per100": {
+   "kcal": 559,
+   "protein": 30.2,
+   "carbs": 10.7,
+   "fat": 49.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 9
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170150",
+  "name": "Sésamo",
+  "per100": {
+   "kcal": 573,
+   "protein": 17.7,
+   "carbs": 23.5,
+   "fat": 49.7
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 9
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173736",
+  "name": "Porotos cocidos",
+  "per100": {
+   "kcal": 136,
+   "protein": 9.3,
+   "carbs": 24.5,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 177
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173735",
+  "name": "Porotos negros cocidos",
+  "per100": {
+   "kcal": 132,
+   "protein": 8.9,
+   "carbs": 23.7,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 172
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:175194",
+  "name": "Porotos rojos cocidos",
+  "per100": {
+   "kcal": 127,
+   "protein": 8.7,
+   "carbs": 22.8,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 177
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172421",
+  "name": "Lentejas cocidas",
+  "per100": {
+   "kcal": 116,
+   "protein": 9,
+   "carbs": 20.1,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 198
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173757",
+  "name": "Garbanzos cocidos",
+  "per100": {
+   "kcal": 164,
+   "protein": 8.9,
+   "carbs": 27.4,
+   "fat": 2.6
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 164
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172429",
+  "name": "Arvejas partidas cocidas",
+  "per100": {
+   "kcal": 118,
+   "protein": 8.3,
+   "carbs": 21.1,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 196
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173753",
+  "name": "Habas cocidas",
+  "per100": {
+   "kcal": 110,
+   "protein": 7.6,
+   "carbs": 19.7,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 170
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172448",
+  "name": "Tofu",
+  "per100": {
+   "kcal": 78,
+   "protein": 9,
+   "carbs": 2.9,
+   "fat": 4.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "porción",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174289",
+  "name": "Hummus",
+  "per100": {
+   "kcal": 237,
+   "protein": 7.8,
+   "carbs": 15,
+   "fat": 17.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "cucharada",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:172446",
+  "name": "Leche de soya",
+  "per100": {
+   "kcal": 54,
+   "protein": 3.3,
+   "carbs": 6.3,
+   "fat": 1.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174832",
+  "name": "Leche de almendras",
+  "per100": {
+   "kcal": 15,
+   "protein": 0.4,
+   "carbs": 1.3,
+   "fat": 1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174852",
+  "name": "Bebida cola",
+  "per100": {
+   "kcal": 42,
+   "protein": 0,
+   "carbs": 10.4,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lata",
+    "grams": 350
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169098",
+  "name": "Jugo de naranja",
+  "per100": {
+   "kcal": 45,
+   "protein": 0.7,
+   "carbs": 10.4,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173933",
+  "name": "Jugo de manzana",
+  "per100": {
+   "kcal": 46,
+   "protein": 0.1,
+   "carbs": 11.3,
+   "fat": 0.1
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168185",
+  "name": "Néctar de durazno",
+  "per100": {
+   "kcal": 50,
+   "protein": 0.2,
+   "carbs": 11.9,
+   "fat": 0.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "vaso",
+    "grams": 250
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168746",
+  "name": "Cerveza",
+  "per100": {
+   "kcal": 43,
+   "protein": 0.5,
+   "carbs": 3.6,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "lata",
+    "grams": 350
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173190",
+  "name": "Vino tinto",
+  "per100": {
+   "kcal": 85,
+   "protein": 0.1,
+   "carbs": 2.6,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "copa",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174837",
+  "name": "Vino blanco",
+  "per100": {
+   "kcal": 82,
+   "protein": 0.1,
+   "carbs": 2.6,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "copa",
+    "grams": 150
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174815",
+  "name": "Pisco",
+  "per100": {
+   "kcal": 231,
+   "protein": 0,
+   "carbs": 0,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "corrida",
+    "grams": 45
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171890",
+  "name": "Café",
+  "per100": {
+   "kcal": 1,
+   "protein": 0.1,
+   "carbs": 0,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173227",
+  "name": "Té",
+  "per100": {
+   "kcal": 1,
+   "protein": 0,
+   "carbs": 0.3,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170317",
+  "name": "Pizza de queso",
+  "per100": {
+   "kcal": 268,
+   "protein": 10.4,
+   "carbs": 29,
+   "fat": 12.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "trozo",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173295",
+  "name": "Pizza de pepperoni",
+  "per100": {
+   "kcal": 282,
+   "protein": 11.7,
+   "carbs": 32,
+   "fat": 11.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "trozo",
+    "grams": 110
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169677",
+  "name": "Papas fritas de bolsa",
+  "per100": {
+   "kcal": 532,
+   "protein": 6.4,
+   "carbs": 53.8,
+   "fat": 34
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "bolsa chica",
+    "grams": 45
+   },
+   {
+    "label": "puñado",
+    "grams": 15
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167555",
+  "name": "Ramitas",
+  "per100": {
+   "kcal": 384,
+   "protein": 10,
+   "carbs": 80.4,
+   "fat": 2.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "puñado",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167959",
+  "name": "Palomitas de maíz",
+  "per100": {
+   "kcal": 387,
+   "protein": 12.9,
+   "carbs": 77.8,
+   "fat": 4.5
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 8
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:167542",
+  "name": "Barra de cereal",
+  "per100": {
+   "kcal": 471,
+   "protein": 10.1,
+   "carbs": 64.4,
+   "fat": 19.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 25
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173177",
+  "name": "Proteína whey",
+  "per100": {
+   "kcal": 359,
+   "protein": 58.1,
+   "carbs": 29.1,
+   "fat": 1.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "medida",
+    "grams": 30
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:170693",
+  "name": "Hamburguesa completa",
+  "per100": {
+   "kcal": 297,
+   "protein": 16.5,
+   "carbs": 31.5,
+   "fat": 12
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 100
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:173321",
+  "name": "Nuggets de pollo",
+  "per100": {
+   "kcal": 271,
+   "protein": 19.2,
+   "carbs": 17.3,
+   "fat": 14
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 16
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:174536",
+  "name": "Caldo de pollo",
+  "per100": {
+   "kcal": 6,
+   "protein": 0.6,
+   "carbs": 0.4,
+   "fat": 0.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:171559",
+  "name": "Sopa de verduras",
+  "per100": {
+   "kcal": 39,
+   "protein": 1.1,
+   "carbs": 7.9,
+   "fat": 0.4
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169094",
+  "name": "Aceitunas negras",
+  "per100": {
+   "kcal": 116,
+   "protein": 0.8,
+   "carbs": 6,
+   "fat": 10.9
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 4
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169096",
+  "name": "Aceitunas verdes",
+  "per100": {
+   "kcal": 145,
+   "protein": 1,
+   "carbs": 3.8,
+   "fat": 15.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 3
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168558",
+  "name": "Pepinillos",
+  "per100": {
+   "kcal": 12,
+   "protein": 0.5,
+   "carbs": 2.4,
+   "fat": 0.3
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 35
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169596",
+  "name": "Gelatina preparada",
+  "per100": {
+   "kcal": 60,
+   "protein": 1.2,
+   "carbs": 14.2,
+   "fat": 0
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 240
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:169608",
+  "name": "Flan",
+  "per100": {
+   "kcal": 130,
+   "protein": 1.5,
+   "carbs": 22.6,
+   "fat": 3.8
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "unidad",
+    "grams": 110
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ },
+ {
+  "id": "gen:168782",
+  "name": "Arroz con leche",
+  "per100": {
+   "kcal": 108,
+   "protein": 3.2,
+   "carbs": 18.4,
+   "fat": 2.2
+  },
+  "portions": [
+   {
+    "label": "100 g",
+    "grams": 100
+   },
+   {
+    "label": "taza",
+    "grams": 140
+   }
+  ],
+  "source": "generic",
+  "updatedAt": 0
+ }
+]
