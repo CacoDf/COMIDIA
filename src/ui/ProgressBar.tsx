@@ -12,7 +12,7 @@ export function ProgressBar({ value, max, label, color }: { value: number; max: 
       aria-valuenow={Math.round(value)}
       data-over={value > max ? 'true' : undefined}
     >
-      <div className="progress__fill" style={{ width: `${pct}%`, background: `var(--${color})` }} />
+      <div className="progress__fill" style={{ clipPath: `inset(0 ${100 - pct}% 0 0 round 2px)`, background: `var(--${color})` }} />
     </div>
   );
 }

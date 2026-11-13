@@ -295,7 +295,7 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 
 /* Barra de progreso */
 .progress { height: 4px; border-radius: 2px; background: var(--fill-2); overflow: hidden; }
-.progress__fill { height: 100%; border-radius: inherit; transition: width 350ms var(--ease-out); }
+.progress__fill { height: 100%; width: 100%; transition: clip-path 350ms var(--ease-out); }
 .progress[data-over='true'] .progress__fill { opacity: 0.55; }
 
 /* Control segmentado */
