@@ -9,6 +9,9 @@ import WelcomeScreen from './screens/welcome/WelcomeScreen';
 import TodayScreen from './screens/today/TodayScreen';
 import AddMenuScreen from './screens/add/AddMenuScreen';
 import SearchScreen from './screens/add/SearchScreen';
+import TextScreen from './screens/add/TextScreen';
+import ReviewScreen from './screens/review/ReviewScreen';
+import { DraftProvider } from './state/DraftContext';
 import './ui/ui.css';
 
 /** Pantalla provisoria hasta que su tarea la implemente. */
@@ -50,12 +53,12 @@ export function AppRoutes() {
           <Route path="/ajustes" element={<Pending title="Ajustes" />} />
         </Route>
         <Route path="/agregar/:slot" element={<AddMenuScreen />} />
-        <Route path="/agregar/:slot/texto" element={<Pending title="Escribir" tabbar={false} />} />
+        <Route path="/agregar/:slot/texto" element={<TextScreen />} />
         <Route path="/agregar/:slot/foto" element={<Pending title="Foto" tabbar={false} />} />
         <Route path="/agregar/:slot/codigo" element={<Pending title="Código" tabbar={false} />} />
         <Route path="/agregar/:slot/buscar" element={<SearchScreen />} />
         <Route path="/agregar/:slot/mis-comidas" element={<Pending title="Mis comidas" tabbar={false} />} />
-        <Route path="/revision" element={<Pending title="Revisión" tabbar={false} />} />
+        <Route path="/revision" element={<ReviewScreen />} />
         <Route path="/sugerencias" element={<Pending title="Sugerencias" tabbar={false} />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
@@ -67,7 +70,9 @@ export default function App() {
   return (
     <HashRouter>
       <ToastProvider>
-        <AppRoutes />
+        <DraftProvider>
+          <AppRoutes />
+        </DraftProvider>
       </ToastProvider>
     </HashRouter>
   );

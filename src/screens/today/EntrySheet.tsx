@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useDraft } from '../../state/DraftContext';
 import { copyEntry, deleteEntry, restoreEntry, updateEntry } from '../../db/repo';
 import { sumMacros } from '../../domain/macros';
 import { dayTitle } from '../../domain/dates';
@@ -17,9 +19,18 @@ const macroLine = (m: { protein: number; carbs: number; fat: number }) =>
 /** Detalle de una entrada del diario: ingredientes, mover, copiar y borrar. */
 export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose: () => void }) {
   const toast = useToast();
+  const navigate = useNavigate();
+  const { setDraft } = useDraft();
   const [copyDate, setCopyDate] = useState('');
   if (!entry) return null;
   const total = sumMacros(entry.items.map((i) => i.macros));
+
+  function edit() {
+    const e = entry!;
+    setDraft({ date: e.date, slot: e.slot, name: e.name, items: e.items, source: e.source, entryId: e.id });
+    onClose();
+    navigate('/revision');
+  }
 
   async function move(slot: MealSlot) {
     await updateEntry(entry!.id, { slot });
@@ -48,6 +59,7 @@ export function EntrySheet({ entry, onClose }: { entry: LogEntry | null; onClose
         {entry.items.map((it, i) => (
           <ListRow key={i} title={it.name} subtitle={`${fmtG(it.grams)} g · ${macroLine(it.macros)}`} detail={`${fmtKcal(it.macros.kcal)}`} />
         ))}
+        <ListRow tone="action" title="Editar" onClick={edit} />
       </ListSection>
 
       <ListSection header="Mover a">
