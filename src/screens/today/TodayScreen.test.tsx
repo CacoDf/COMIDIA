@@ -44,20 +44,22 @@ test('muestra consumido, meta y lo que queda para los cuatro', async () => {
   await addEntry(entry('Avena', 'breakfast', 409, today, 60, 55, 11));
   renderToday();
   const kcal = await screen.findByRole('group', { name: 'Calorías' });
-  await waitFor(() => expect(kcal).toHaveTextContent('1.800'));
-  expect(kcal).toHaveTextContent('quedan');
-  expect(kcal).toHaveTextContent('409 de 2.209');
-  expect(screen.getByRole('group', { name: 'Proteína' })).toHaveTextContent('100');
-  expect(screen.getByRole('group', { name: 'Carbos' })).toHaveTextContent('200');
-  expect(screen.getByRole('group', { name: 'Grasa' })).toHaveTextContent('50');
+  await waitFor(() => expect(kcal).toHaveTextContent('409 / 2.209'));
+  expect(kcal).toHaveTextContent('Te quedan 1.800 kcal');
+  expect(screen.getByRole('meter', { name: 'Calorías del día' })).toHaveAttribute('aria-valuenow', '409');
+  expect(kcal).toHaveTextContent('1.988');
+  expect(kcal).toHaveTextContent('2.430');
+  expect(screen.getByRole('group', { name: 'Proteína' })).toHaveTextContent('60 / 160 g');
+  expect(screen.getByRole('group', { name: 'Carbos' })).toHaveTextContent('55 / 255 g');
+  expect(screen.getByRole('group', { name: 'Grasa' })).toHaveTextContent('11 / 61 g');
 });
 
 test('al pasarse muestra el exceso, no un negativo', async () => {
   await addEntry(entry('Asado', 'lunch', 2309, today, 100, 100, 70));
   renderToday();
   const kcal = await screen.findByRole('group', { name: 'Calorías' });
-  await waitFor(() => expect(kcal).toHaveTextContent('100'));
-  expect(kcal).toHaveTextContent('de más');
+  await waitFor(() => expect(kcal).toHaveTextContent('2.309 / 2.209'));
+  expect(kcal).toHaveTextContent('Te pasaste por 100 kcal');
   expect(kcal).not.toHaveTextContent('-100');
 });
 

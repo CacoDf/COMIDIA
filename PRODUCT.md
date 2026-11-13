@@ -54,7 +54,7 @@ No logo, imagery or brand assets exist. No testimonials or metrics; none should 
 ## Product Principles
 
 1. Logging speed beats everything: the shortest path from "I'm eating" to "it's saved".
-2. Calories, protein, carbs and fat carry equal weight at a glance; none is hidden behind another.
+2. Calories lead (big eaten / target number with an arc and a ±10 % target range), with protein, carbs and fat right below, each with its own bar. Owner changed this on 2026-11-13 from "four equal" by asking for this calorie-counter layout.
 3. The AI proposes, the person decides: every estimate is visible and editable before it counts.
 4. Honest numbers: show estimates as estimates, never fake precision, never guilt-trip about going over.
 5. Private and free by construction: nothing leaves the phone except the calls needed for AI and product lookup.
