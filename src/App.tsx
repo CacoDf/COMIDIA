@@ -4,6 +4,7 @@ import { getProfile } from './db/repo';
 import { TabBar } from './ui/TabBar';
 import { ToastProvider } from './ui/Toast';
 import { OfflineBanner } from './ui/OfflineBanner';
+import { EdgeSwipeBack } from './ui/EdgeSwipeBack';
 import WelcomeScreen from './screens/welcome/WelcomeScreen';
 import TodayScreen from './screens/today/TodayScreen';
 import AddMenuScreen from './screens/add/AddMenuScreen';
@@ -68,6 +69,7 @@ export default function App() {
     <HashRouter>
       <ToastProvider>
         <DraftProvider>
+          <EdgeSwipeBack />
           <AppRoutes />
         </DraftProvider>
       </ToastProvider>

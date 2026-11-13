@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter, Route, Routes, useLocation } from 'react-router';
+import { EdgeSwipeBack } from './EdgeSwipeBack';
 import { Button } from './Button';
 import { Field, NumberField } from './Field';
 import { ListRow, ListSection } from './List';
@@ -104,7 +105,7 @@ test('Sheet acepta otro texto para cerrar', async () => {
   expect(onClose).toHaveBeenCalled();
 });
 
-test('Sheet se cierra al arrastrarla hacia abajo, no con un arrastre corto', () => {
+test('Sheet se cierra al arrastrarla hacia abajo, no con un arrastre corto', async () => {
   const onClose = vi.fn();
   render(<Sheet open title="Arrastre" onClose={onClose}><p>x</p></Sheet>);
   const handle = screen.getByTestId('sheet-handle');
@@ -115,7 +116,44 @@ test('Sheet se cierra al arrastrarla hacia abajo, no con un arrastre corto', () 
   fireEvent.pointerDown(handle, { clientY: 100, pointerId: 1 });
   fireEvent.pointerMove(handle, { clientY: 260, pointerId: 1 });
   fireEvent.pointerUp(handle, { clientY: 260, pointerId: 1 });
-  expect(onClose).toHaveBeenCalledTimes(1);
+  await waitFor(() => expect(onClose).toHaveBeenCalledTimes(1));
+});
+
+test('un campo de fecha vacío muestra Elegir', () => {
+  const { rerender } = render(<Field label="Día" type="date" value="" onChange={() => {}} />);
+  expect(screen.getByText('Elegir')).toBeInTheDocument();
+  rerender(<Field label="Día" type="date" value="2026-11-13" onChange={() => {}} />);
+  expect(screen.queryByText('Elegir')).not.toBeInTheDocument();
+});
+
+test('deslizar desde el borde izquierdo vuelve atrás', async () => {
+  function Where() { const l = useLocation(); return <p data-testid="where">{l.pathname}</p>; }
+  render(
+    <MemoryRouter initialEntries={['/', '/agregar/lunch']} initialIndex={1}>
+      <EdgeSwipeBack />
+      <Routes><Route path="*" element={<Where />} /></Routes>
+    </MemoryRouter>,
+  );
+  expect(screen.getByTestId('where')).toHaveTextContent('/agregar/lunch');
+  fireEvent.pointerDown(window, { clientX: 8, clientY: 300, pointerType: 'touch', pointerId: 1 });
+  fireEvent.pointerUp(window, { clientX: 30, clientY: 302, pointerType: 'touch', pointerId: 1 });
+  expect(screen.getByTestId('where')).toHaveTextContent('/agregar/lunch');
+  fireEvent.pointerDown(window, { clientX: 8, clientY: 300, pointerType: 'touch', pointerId: 1 });
+  fireEvent.pointerUp(window, { clientX: 140, clientY: 310, pointerType: 'touch', pointerId: 1 });
+  await waitFor(() => expect(screen.getByTestId('where')).toHaveTextContent(/^\/$/));
+});
+
+test('deslizar que no empieza en el borde no hace nada', () => {
+  function Where() { const l = useLocation(); return <p data-testid="where">{l.pathname}</p>; }
+  render(
+    <MemoryRouter initialEntries={['/', '/agregar/lunch']} initialIndex={1}>
+      <EdgeSwipeBack />
+      <Routes><Route path="*" element={<Where />} /></Routes>
+    </MemoryRouter>,
+  );
+  fireEvent.pointerDown(window, { clientX: 120, clientY: 300, pointerType: 'touch', pointerId: 1 });
+  fireEvent.pointerUp(window, { clientX: 300, clientY: 300, pointerType: 'touch', pointerId: 1 });
+  expect(screen.getByTestId('where')).toHaveTextContent('/agregar/lunch');
 });
 
 test('Sheet cerrado no muestra nada', () => {

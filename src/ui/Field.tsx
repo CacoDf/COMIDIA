@@ -14,7 +14,10 @@ export function Field({ label, value, onChange, stacked, className, ...rest }: F
   return (
     <div className={['field', stacked ? 'field--stacked' : '', className ?? ''].filter(Boolean).join(' ')}>
       <label htmlFor={id} className={stacked ? 'field__label t-footnote c-secondary' : 'field__label'}>{label}</label>
-      <input {...rest} id={id} className="field__input" value={value} onChange={(e) => onChange(e.target.value)} />
+      <span className="field__control">
+        <input {...rest} id={id} className={rest.type === 'date' && !value ? 'field__input field__input--empty' : 'field__input'} value={value} onChange={(e) => onChange(e.target.value)} />
+        {rest.type === 'date' && !value && <span className="field__placeholder" aria-hidden="true">Elegir</span>}
+      </span>
     </div>
   );
 }

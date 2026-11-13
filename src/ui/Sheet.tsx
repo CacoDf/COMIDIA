@@ -25,6 +25,7 @@ export function Sheet({ open, title, onClose, closeLabel = 'Cancelar', doneLabel
   closeRef.current = onClose;
   const drag = useRef<{ startY: number } | null>(null);
   const [offset, setOffset] = useState(0);
+  const [leaving, setLeaving] = useState(false);
 
   // Solo al abrir: si dependiera de onClose, cada redibujo le robaría el foco al campo que se está escribiendo.
   useEffect(() => {
@@ -56,8 +57,12 @@ export function Sheet({ open, title, onClose, closeLabel = 'Cancelar', doneLabel
     if (!drag.current) return;
     const moved = e.clientY - drag.current.startY;
     drag.current = null;
-    setOffset(0);
-    if (moved > DISMISS_PX) closeRef.current();
+    if (moved > DISMISS_PX) {
+      setLeaving(true);
+      setTimeout(() => { setLeaving(false); setOffset(0); closeRef.current(); }, 220);
+    } else {
+      setOffset(0);
+    }
   };
 
   return createPortal(
@@ -69,7 +74,7 @@ export function Sheet({ open, title, onClose, closeLabel = 'Cancelar', doneLabel
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        style={offset ? { transform: `translateY(${offset}px)`, transition: 'none' } : undefined}
+        style={leaving ? { transform: 'translateY(100%)' } : drag.current && offset ? { transform: `translateY(${offset}px)`, transition: 'none' } : undefined}
       >
         <div
           className="sheet__handle"

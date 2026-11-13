@@ -433,3 +433,16 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 @container (max-width: 17em) { .day__macros { grid-template-columns: 1fr; } }
 .day-wrap { container-type: inline-size; }
 .day__range { margin: 2px 0 0; color: var(--label-2); }
+
+/* Fecha vacía: Safari en iPhone no muestra nada, así que decimos "Elegir" */
+.field__control { position: relative; flex: 1; min-width: 0; display: flex; justify-content: flex-end; }
+.field__control .field__input { width: 100%; }
+.field__input--empty { color: transparent; }
+.field__placeholder { position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: var(--label-2); pointer-events: none; }
+
+/* Separador entre un texto largo y la acción de abajo */
+.textarea + .row::before { content: ''; position: absolute; top: 0; right: 0; left: var(--gutter); border-top: 0.5px solid var(--separator); }
+
+/* Entrada de pantallas: se deslizan desde la derecha, como al avanzar en iOS */
+.screen { animation: screen-in 280ms var(--ease-out); }
+@keyframes screen-in { from { transform: translateX(24px); opacity: 0.6; } to { transform: none; opacity: 1; } }
