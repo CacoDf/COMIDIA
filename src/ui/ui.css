@@ -235,6 +235,17 @@ button.row:active, a.row:active { background: var(--fill-2); }
 .meal-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .meal-header__kcal { text-transform: none; }
 
+/* Campo de búsqueda */
+.searchfield {
+  display: flex; align-items: center; gap: 6px; margin: 12px 0 24px; padding: 0 8px;
+  min-height: 36px; border-radius: 10px; background: var(--fill-2); color: var(--label-2);
+}
+.searchfield input { flex: 1; min-width: 0; min-height: 36px; border: 0; background: none; outline: none; color: var(--label); }
+.searchfield input::placeholder { color: var(--label-2); }
+.searchfield input::-webkit-search-cancel-button { filter: grayscale(1); }
+button.row:disabled { color: var(--label-3); cursor: default; }
+button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: var(--label-3); }
+
 /* Barra de progreso */
 .progress { height: 4px; border-radius: 2px; background: var(--fill-2); overflow: hidden; }
 .progress__fill { height: 100%; border-radius: inherit; transition: width 350ms var(--ease-out); }
