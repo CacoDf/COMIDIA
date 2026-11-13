@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useId, type ReactNode } from 'react';
 import { ChevronRight } from 'lucide-react';
 
 export function ListSection({ header, footer, prominent, children, className }: {
@@ -8,10 +8,11 @@ export function ListSection({ header, footer, prominent, children, className }: 
   children: ReactNode;
   className?: string;
 }) {
+  const id = useId();
   return (
-    <section className={['group', className ?? ''].filter(Boolean).join(' ')}>
+    <section className={['group', className ?? ''].filter(Boolean).join(' ')} aria-labelledby={header ? id : undefined}>
       {header && (
-        <h2 className={prominent ? 'group__header group__header--prominent t-title3' : 'group__header t-footnote'}>{header}</h2>
+        <h2 id={id} className={prominent ? 'group__header group__header--prominent t-title3' : 'group__header t-footnote'}>{header}</h2>
       )}
       <div className="group__body">{children}</div>
       {footer && <p className="group__footer t-footnote" style={{ margin: 0 }}>{footer}</p>}

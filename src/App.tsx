@@ -5,6 +5,7 @@ import { Screen } from './ui/Screen';
 import { TabBar } from './ui/TabBar';
 import { ToastProvider } from './ui/Toast';
 import LabScreen from './screens/lab/LabScreen';
+import WelcomeScreen from './screens/welcome/WelcomeScreen';
 import './ui/ui.css';
 
 /** Pantalla provisoria hasta que su tarea la implemente. */
@@ -36,7 +37,7 @@ function WithTabBar() {
 export function AppRoutes() {
   return (
     <Routes>
-      <Route path="/bienvenida" element={<Pending title="Bienvenido a Comidia" tabbar={false} />} />
+      <Route path="/bienvenida" element={<WelcomeScreen />} />
       <Route path="/lab" element={<LabScreen />} />
       <Route element={<RequireProfile />}>
         <Route element={<WithTabBar />}>

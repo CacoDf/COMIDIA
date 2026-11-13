@@ -198,6 +198,12 @@ button.row:active, a.row:active { background: var(--fill-2); }
 .row__detail { flex: none; color: var(--label-2); text-align: right; }
 .row__chevron { flex: none; color: var(--label-3); margin-right: -4px; }
 .row--action { color: var(--tint); }
+.choice { cursor: pointer; }
+.choice:active { background: var(--fill-2); }
+.choice__check { flex: none; color: var(--tint); visibility: hidden; }
+.choice input:checked ~ .choice__check { visibility: visible; }
+.choice:has(input:focus-visible) { outline: 2px solid var(--tint); outline-offset: -2px; }
+.inset { padding: 12px var(--gutter); }
 .row--destructive { color: var(--danger); justify-content: center; }
 
 /* Campos dentro de filas */
