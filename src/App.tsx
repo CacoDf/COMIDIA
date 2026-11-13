@@ -11,6 +11,7 @@ import AddMenuScreen from './screens/add/AddMenuScreen';
 import SearchScreen from './screens/add/SearchScreen';
 import TextScreen from './screens/add/TextScreen';
 import PhotoScreen from './screens/add/PhotoScreen';
+import BarcodeScreen from './screens/add/BarcodeScreen';
 import ReviewScreen from './screens/review/ReviewScreen';
 import { DraftProvider } from './state/DraftContext';
 import './ui/ui.css';
@@ -56,7 +57,7 @@ export function AppRoutes() {
         <Route path="/agregar/:slot" element={<AddMenuScreen />} />
         <Route path="/agregar/:slot/texto" element={<TextScreen />} />
         <Route path="/agregar/:slot/foto" element={<PhotoScreen />} />
-        <Route path="/agregar/:slot/codigo" element={<Pending title="Código" tabbar={false} />} />
+        <Route path="/agregar/:slot/codigo" element={<BarcodeScreen />} />
         <Route path="/agregar/:slot/buscar" element={<SearchScreen />} />
         <Route path="/agregar/:slot/mis-comidas" element={<Pending title="Mis comidas" tabbar={false} />} />
         <Route path="/revision" element={<ReviewScreen />} />

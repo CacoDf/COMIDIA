@@ -246,6 +246,15 @@ button.row:active, a.row:active { background: var(--fill-2); }
 button.row:disabled { color: var(--label-3); cursor: default; }
 button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: var(--label-3); }
 
+/* Escáner */
+.scanner { position: relative; border-radius: var(--radius-group); overflow: hidden; background: #000; aspect-ratio: 4 / 3; }
+.scanner video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scanner__frame {
+  position: absolute; left: 12%; right: 12%; top: 32%; bottom: 32%;
+  border: 2px solid rgba(255, 255, 255, 0.9); border-radius: 12px;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35);
+}
+
 /* Vista previa de foto */
 .photo-preview { border-radius: var(--radius-group); overflow: hidden; background: var(--fill-2); aspect-ratio: 4 / 3; margin-bottom: 8px; }
 .photo-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
