@@ -66,7 +66,7 @@ export function Sheet({ open, title, onClose, closeLabel = 'Cancelar', doneLabel
   };
 
   return createPortal(
-    <div className="sheet-backdrop" onClick={(e) => e.target === e.currentTarget && onClose()}>
+    <div className={leaving ? 'sheet-backdrop sheet-backdrop--leaving' : 'sheet-backdrop'} onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div
         ref={panel}
         className="sheet"

@@ -444,5 +444,11 @@ button.row:disabled .row__subtitle, button.row:disabled .row__leading { color: v
 .textarea + .row::before { content: ''; position: absolute; top: 0; right: 0; left: var(--gutter); border-top: 0.5px solid var(--separator); }
 
 /* Entrada de pantallas: se deslizan desde la derecha, como al avanzar en iOS */
-.screen { animation: screen-in 280ms var(--ease-out); }
+.screen--no-tabbar { animation: screen-in 280ms var(--ease-out); }
 @keyframes screen-in { from { transform: translateX(24px); opacity: 0.6; } to { transform: none; opacity: 1; } }
+
+.field__input--empty::-webkit-calendar-picker-indicator { opacity: 0; }
+.sheet-backdrop { transition: background-color 220ms linear; }
+.sheet-backdrop--leaving { background: rgba(0, 0, 0, 0); }
+/* Franja del borde izquierdo: el gesto de volver es nuestro, no del navegador */
+.edge-zone { position: fixed; left: 0; top: 0; bottom: 0; width: 20px; z-index: 25; touch-action: none; }

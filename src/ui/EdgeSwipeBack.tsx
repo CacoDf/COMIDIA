@@ -40,5 +40,5 @@ export function EdgeSwipeBack() {
       window.removeEventListener('pointercancel', cancel);
     };
   }, [navigate]);
-  return null;
+  return ROOTS.has(pathname) ? null : <div className="edge-zone" aria-hidden="true" />;
 }
