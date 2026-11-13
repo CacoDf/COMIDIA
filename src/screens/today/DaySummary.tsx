@@ -27,7 +27,7 @@ export function DaySummary({ eaten, target }: { eaten: Macros; target: Macros })
               <span className="t-caption c-secondary">{over ? 'de más' : 'quedan'}</span>
               <ProgressBar value={eaten[k]} max={target[k]} label={`${MACRO_LABEL[k]} consumido`} color={k} />
               <span className="summary__of t-caption c-secondary">
-                {fmt(eaten[k])} de {fmt(target[k])}{unit}
+                {fmt(eaten[k])} de{' '}{fmt(target[k])}{unit.replace(' ', ' ')}
               </span>
             </div>
           );
