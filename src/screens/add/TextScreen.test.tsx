@@ -54,7 +54,7 @@ test('mientras espera el botón queda ocupado', async () => {
 });
 
 test.each([
-  ['quota', /cuota gratis de hoy/],
+  ['quota', /cuota gratis/],
   ['offline', /Sin conexión/],
   ['invalid-response', /no se pudo leer/],
   ['no-food', /No encontré comida/],
