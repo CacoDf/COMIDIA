@@ -43,12 +43,14 @@ Si aparece, devuelve servingGrams (gramos de una porción) y name (nombre del pr
 
 const fmt = (n: number) => String(Math.max(0, Math.round(n)));
 
-export function suggestPrompt(req: { remaining: Macros; slot: MealSlot; note?: string }): string {
-  const r = req.remaining;
+export function suggestPrompt(req: { target: Macros; dayLeft: Macros; slot: MealSlot; note?: string }): string {
+  const t = req.target;
+  const d = req.dayLeft;
   const note = req.note?.trim() ? `\nPreferencias del usuario: ${req.note.trim()}` : '';
   return `Eres un nutricionista chileno. Propón 3 ideas distintas para ${SLOT_ES[req.slot]}, con ingredientes fáciles de encontrar en un supermercado chileno.
-Lo que le queda al usuario hoy: ${fmt(r.kcal)} kcal, ${fmt(r.protein)} g de proteína, ${fmt(r.carbs)} g de carbohidratos y ${fmt(r.fat)} g de grasa.
-Cada idea debe acercarse a esos números sin pasarse mucho.${note}
+Meta para ESTA comida: unos ${fmt(t.kcal)} kcal, ${fmt(t.protein)} g de proteína, ${fmt(t.carbs)} g de carbohidratos y ${fmt(t.fat)} g de grasa.
+Cada idea debe acercarse a esa meta: es una porción normal de ${SLOT_ES[req.slot]}, no toda la comida del día.
+Como referencia, al usuario le quedan en total hoy ${fmt(d.kcal)} kcal; nunca te pases de eso.${note}
 Para cada idea da: name, items (cada ingrediente con name, grams, kcal, protein, carbs, fat) y steps (pasos breves de preparación).`;
 }
 

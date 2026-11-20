@@ -4,6 +4,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { ChevronLeft } from 'lucide-react';
 import { listEntries, saveMeal } from '../../db/repo';
 import { remaining, sumMacros, ZERO } from '../../domain/macros';
+import { mealBudget } from '../../domain/mealBudget';
 import { todayLocal } from '../../domain/dates';
 import { MEAL_SLOTS, type MealSlot } from '../../domain/types';
 import { AiError, suggestMeals, type Suggestion } from '../../services/gemini';
@@ -20,6 +21,8 @@ import { fmtG, fmtKcal } from '../../ui/labels';
 import { macroLine } from './mealText';
 
 const SHORT = { breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena', snacks: 'Colaciones' } as const;
+
+const FOR_SLOT = { breakfast: 'Para el desayuno', lunch: 'Para el almuerzo', dinner: 'Para la cena', snacks: 'Para la colación' } as const;
 
 function slotForNow(h = new Date().getHours()): MealSlot {
   if (h < 11) return 'breakfast';
@@ -45,13 +48,15 @@ export default function SuggestScreen() {
 
   const eaten = entries?.length ? sumMacros(entries.flatMap((e) => e.items.map((i) => i.macros))) : ZERO;
   const left = targets ? remaining(targets, eaten) : null;
+  const logged = new Set((entries ?? []).map((e) => e.slot));
+  const budget = left ? mealBudget(left, slot, logged) : null;
 
   async function ask() {
-    if (!ai.config || !left) return;
+    if (!ai.config || !left || !budget) return;
     setBusy(true);
     setError('');
     try {
-      setIdeas(await suggestMeals(ai.config, { remaining: left, slot, ...(note.trim() ? { note: note.trim() } : {}) }));
+      setIdeas(await suggestMeals(ai.config, { target: budget, dayLeft: left, slot, ...(note.trim() ? { note: note.trim() } : {}) }));
     } catch (e) {
       setError(aiErrorMessage(e instanceof AiError ? e.kind : 'unknown'));
     }
@@ -92,7 +97,10 @@ export default function SuggestScreen() {
         </p>
       ) : (
         <>
-          <ListSection header="Para">
+          <ListSection
+            header="Para"
+            footer={budget ? `${FOR_SLOT[slot]}: unos ${fmtKcal(budget.kcal)} kcal · P ${fmtG(budget.protein)} · C ${fmtG(budget.carbs)} · G ${fmtG(budget.fat)} g. Lo que te queda se reparte entre las comidas que faltan.` : undefined}
+          >
             <div className="inset">
               <SegmentedControl label="Comida" value={slot} options={MEAL_SLOTS.map((s) => ({ value: s, label: SHORT[s] }))} onChange={setSlot} />
             </div>

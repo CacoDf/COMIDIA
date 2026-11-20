@@ -140,7 +140,13 @@ describe('Ideas', () => {
     await user.type(screen.getByLabelText('Preferencias (opcional)'), 'sin lactosa');
     await user.click(screen.getByRole('button', { name: 'Pedir ideas' }));
     expect(await screen.findAllByRole('region', { name: /^[ABC]$/ })).toHaveLength(3);
-    expect(spy).toHaveBeenCalledWith({ key: 'K', model: 'm' }, { remaining: { kcal: 1000, protein: 100, carbs: 100, fat: 30 }, slot: 'dinner', note: 'sin lactosa' });
+    expect(spy).toHaveBeenCalledWith({ key: 'K', model: 'm' }, {
+      target: { kcal: 750, protein: 75, carbs: 75, fat: 22.5 },
+      dayLeft: { kcal: 1000, protein: 100, carbs: 100, fat: 30 },
+      slot: 'dinner',
+      note: 'sin lactosa',
+    });
+    expect(screen.getByText(/Para la cena: unos 750 kcal/)).toBeInTheDocument();
     expect(screen.getAllByText('Calentar la leche')).toHaveLength(3);
   });
 

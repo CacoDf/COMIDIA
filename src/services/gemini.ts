@@ -170,7 +170,7 @@ export async function readLabel(cfg: AiConfig, jpegBase64: string): Promise<Labe
 
 export async function suggestMeals(
   cfg: AiConfig,
-  req: { remaining: Macros; slot: MealSlot; note?: string },
+  req: { target: Macros; dayLeft: Macros; slot: MealSlot; note?: string },
 ): Promise<Suggestion[]> {
   const r = await generate(cfg, [{ text: suggestPrompt(req) }], SUGGESTIONS_SCHEMA, SuggestionsResponse);
   if (r.suggestions.length === 0) throw new AiError('invalid-response', 'Sin sugerencias');

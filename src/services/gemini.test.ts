@@ -91,10 +91,10 @@ test('readLabel devuelve valores por 100 g', async () => {
   expect(await readLabel(cfg, 'B64')).toEqual({ name: 'Galletas', per100: { kcal: 480, protein: 6, carbs: 70, fat: 20 }, servingGrams: 30 });
 });
 
-test('suggestMeals envía los restantes y devuelve 3', async () => {
+test('suggestMeals envía la meta de la comida y lo que queda del día, y devuelve 3', async () => {
   const s = { name: 'Pollo con arroz', items: [huevo], steps: ['Cocinar'] };
   const fn = mockFetch(reply({ suggestions: [s, s, s, s] }));
-  const out = await suggestMeals(cfg, { remaining: { kcal: 500, protein: 45, carbs: 50, fat: 10 }, slot: 'dinner', note: 'sin lactosa' });
+  const out = await suggestMeals(cfg, { target: { kcal: 500, protein: 45, carbs: 50, fat: 10 }, dayLeft: { kcal: 1234, protein: 90, carbs: 120, fat: 30 }, slot: 'dinner', note: 'sin lactosa' });
   expect(out).toHaveLength(3);
   expect(out[0]).toMatchObject({ name: 'Pollo con arroz', steps: ['Cocinar'] });
   expect(out[0].items[0].macros.kcal).toBe(150);
@@ -102,11 +102,12 @@ test('suggestMeals envía los restantes y devuelve 3', async () => {
   expect(sent).toContain('500');
   expect(sent).toContain('45');
   expect(sent).toContain('sin lactosa');
+  expect(sent).toContain('1234');
 });
 
 test('suggestMeals sin sugerencias lanza invalid-response', async () => {
   mockFetch(reply({ suggestions: [] }));
-  await expect(suggestMeals(cfg, { remaining: { kcal: 1, protein: 1, carbs: 1, fat: 1 }, slot: 'lunch' }))
+  await expect(suggestMeals(cfg, { target: { kcal: 1, protein: 1, carbs: 1, fat: 1 }, dayLeft: { kcal: 1, protein: 1, carbs: 1, fat: 1 }, slot: 'lunch' }))
     .rejects.toMatchObject({ kind: 'invalid-response' });
 });
 
