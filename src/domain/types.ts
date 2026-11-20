@@ -36,7 +36,7 @@ export type LogEntry = {
 };
 export type SavedMeal = { id: string; name: string; items: Item[]; steps?: string[]; createdAt: number };
 export type WeightEntry = { id: string; date: string; kg: number };
-export type Settings = { geminiKey?: string; geminiModel?: string; lastExportAt?: number; reminderDismissedAt?: number };
+export type Settings = { geminiKey?: string; geminiModel?: string; lastExportAt?: number; reminderDismissedAt?: number; scanMode?: 'photo' | 'live' };
 export type Targets = Macros & { bmr: number; tdee: number; flooredAtBmr: boolean; manual: boolean };
 
 export const MEAL_SLOTS: MealSlot[] = ['breakfast', 'lunch', 'dinner', 'snacks'];

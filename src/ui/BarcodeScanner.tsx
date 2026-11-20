@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { StableReader } from '../lib/barcode';
+import { getDetector } from '../lib/barcodeEngine';
 
 type Props = {
   onDetected: (code: string) => void;
@@ -39,13 +40,14 @@ export function BarcodeScanner({ onDetected, onUnavailable, paused = false }: Pr
         stream.getTracks().forEach((t) => t.stop());
         return;
       }
-      const [{ BarcodeDetector, setZXingModuleOverrides }, { default: wasmUrl }] = await Promise.all([
-        import('barcode-detector/ponyfill'),
-        import('zxing-wasm/reader/zxing_reader.wasm?url'),
-      ]);
-      // El motor viene incluido en la app (y en la caché sin conexión) en vez de descargarse de un CDN.
-      setZXingModuleOverrides({ locateFile: (path: string, prefix: string) => (path.endsWith('.wasm') ? wasmUrl : prefix + path) });
-      const detector = new BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e'] });
+      let detector;
+      try {
+        detector = await getDetector();
+      } catch {
+        stream.getTracks().forEach((t) => t.stop());
+        handlers.current.onUnavailable('unsupported');
+        return;
+      }
       const v = video.current!;
       v.srcObject = stream;
       await v.play().catch(() => {});

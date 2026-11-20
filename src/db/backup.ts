@@ -53,6 +53,7 @@ const BackupSchema = z.object({
       geminiModel: z.string().optional(),
       lastExportAt: z.number().optional(),
       reminderDismissedAt: z.number().optional(),
+      scanMode: z.enum(['photo', 'live']).optional(),
     }),
     entries: z.array(LogEntrySchema),
     weights: z.array(WeightEntrySchema),

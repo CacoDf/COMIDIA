@@ -1,7 +1,9 @@
 import { useId, useState } from 'react';
 import { Navigate } from 'react-router';
-import { Camera, ChevronLeft } from 'lucide-react';
-import { addEntry, getFoodByBarcode, upsertFood } from '../../db/repo';
+import { useLiveQuery } from 'dexie-react-hooks';
+import { Camera, ChevronLeft, ScanBarcode, Video } from 'lucide-react';
+import { addEntry, getFoodByBarcode, getSettings, patchSettings, upsertFood } from '../../db/repo';
+import { detectCodeInImage } from '../../lib/barcodeEngine';
 import { fetchProduct } from '../../services/openFoodFacts';
 import { AiError, readLabel, type LabelReading } from '../../services/gemini';
 import { downscaleToJpegBase64 } from '../../lib/image';
@@ -22,6 +24,8 @@ import { useAddContext } from './useAddContext';
 
 type State =
   | { kind: 'scanning' }
+  | { kind: 'reading-code' }
+  | { kind: 'no-code' }
   | { kind: 'looking'; code: string }
   | { kind: 'not-found'; code: string }
   | { kind: 'reading-label'; code: string }
@@ -33,6 +37,9 @@ export default function BarcodeScreen() {
   const ai = useAi();
   const toast = useToast();
   const labelInput = useId();
+  const photoInput = useId();
+  const settings = useLiveQuery(() => getSettings(), []);
+  const mode = settings ? (settings.scanMode ?? 'photo') : null;
   const [state, setState] = useState<State>({ kind: 'scanning' });
   const [food, setFood] = useState<Food | null>(null);
   const [camera, setCamera] = useState<'ok' | 'denied' | 'unsupported'>('ok');
@@ -40,8 +47,8 @@ export default function BarcodeScreen() {
 
   if (!slot) return <Navigate to="/" replace />;
 
-  async function lookup(code: string) {
-    if (state.kind === 'looking' || food) return;
+  async function lookup(code: string, fromPhoto = false) {
+    if ((!fromPhoto && state.kind === 'looking') || food) return;
     setState({ kind: 'looking', code });
     const local = await getFoodByBarcode(code);
     if (local) {
@@ -63,6 +70,17 @@ export default function BarcodeScreen() {
     }
   }
 
+  async function readCodePhoto(file: File) {
+    setState({ kind: 'reading-code' });
+    try {
+      const code = await detectCodeInImage(file);
+      if (code) await lookup(code, true);
+      else setState({ kind: 'no-code' });
+    } catch {
+      setState({ kind: 'no-code' });
+    }
+  }
+
   async function readLabelPhoto(code: string, file: File) {
     if (!ai.config) return;
     setState({ kind: 'reading-label', code });
@@ -81,7 +99,7 @@ export default function BarcodeScreen() {
   }
 
   const scanAgain = () => { setState({ kind: 'scanning' }); setFood(null); };
-  const busy = state.kind === 'looking' || state.kind === 'reading-label';
+  const busy = state.kind === 'looking' || state.kind === 'reading-label' || state.kind === 'reading-code';
 
   return (
     <Screen
@@ -95,25 +113,63 @@ export default function BarcodeScreen() {
       }
     >
       <div style={{ height: 12 }} />
-      {camera === 'ok' ? (
+      {mode === 'live' && (camera === 'ok' ? (
         <>
           <BarcodeScanner
             paused={state.kind !== 'scanning' || food !== null}
             onDetected={lookup}
             onUnavailable={(r) => setCamera(r)}
           />
-          <p className="t-footnote c-secondary" style={{ textAlign: 'center', margin: '8px 16px 20px' }} aria-live="polite">
+          <p className="t-footnote c-secondary" style={{ textAlign: 'center', margin: '8px 16px 12px' }} aria-live="polite">
             {state.kind === 'looking' ? `Buscando ${state.code}…`
               : state.kind === 'reading-label' ? 'Leyendo la etiqueta…'
               : 'Apunta al código de barras y mantén el teléfono quieto.'}
           </p>
         </>
       ) : (
-        <p className="t-subhead c-secondary" style={{ margin: '8px 16px 20px' }}>
+        <p className="t-subhead c-secondary" style={{ margin: '8px 16px 12px' }}>
           {camera === 'denied'
-            ? 'No hay acceso a la cámara. Actívalo en Ajustes de iPhone › Safari › Cámara, o escribe el código.'
-            : 'Este navegador no puede usar la cámara. Escribe el código.'}
+            ? 'No hay acceso a la cámara en vivo. Usa la foto del código o escríbelo.'
+            : 'Este navegador no puede usar la cámara en vivo. Usa la foto del código o escríbelo.'}
         </p>
+      ))}
+
+      {mode === 'photo' && (
+        <>
+          <label htmlFor={photoInput} className="btn btn--large btn--filled" style={{ cursor: 'pointer' }}>
+            <ScanBarcode size={20} aria-hidden="true" />
+            Sacar foto al código
+            <input
+              id={photoInput}
+              className="visually-hidden"
+              type="file"
+              accept="image/*"
+              capture="environment"
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) void readCodePhoto(f);
+                e.target.value = '';
+              }}
+            />
+          </label>
+          <p className="t-footnote c-secondary" style={{ textAlign: 'center', margin: '8px 16px 20px' }} aria-live="polite">
+            {state.kind === 'reading-code' ? 'Leyendo el código…'
+              : state.kind === 'looking' ? `Buscando ${state.code}…`
+              : state.kind === 'reading-label' ? 'Leyendo la etiqueta…'
+              : state.kind === 'no-code' ? 'No pude leer el código. Prueba con más luz, más cerca y con el código derecho, o escríbelo abajo.'
+              : 'Saca la foto de cerca, con todo el código dentro. No pide permiso de cámara.'}
+          </p>
+        </>
+      )}
+
+      {mode && (
+        <ListSection>
+          {mode === 'photo' ? (
+            <ListRow tone="action" leading={<Video size={20} strokeWidth={2} />} title="Usar cámara en vivo" onClick={() => { setCamera('ok'); void patchSettings({ scanMode: 'live' }); }} />
+          ) : (
+            <ListRow tone="action" leading={<Camera size={20} strokeWidth={2} />} title="Usar foto del código" onClick={() => void patchSettings({ scanMode: 'photo' })} />
+          )}
+        </ListSection>
       )}
 
       {state.kind === 'not-found' && (

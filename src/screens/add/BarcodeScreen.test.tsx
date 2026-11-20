@@ -9,6 +9,8 @@ import { todayLocal } from '../../domain/dates';
 import * as off from '../../services/openFoodFacts';
 import * as gemini from '../../services/gemini';
 import * as image from '../../lib/image';
+import * as engine from '../../lib/barcodeEngine';
+import { getSettings } from '../../db/repo';
 import type { Food } from '../../domain/types';
 
 vi.mock('../../ui/BarcodeScanner', () => ({
@@ -45,6 +47,7 @@ function renderScreen() {
 beforeEach(async () => {
   await resetDb();
   vi.restoreAllMocks();
+  await patchSettings({ scanMode: 'live' }); // las pruebas de abajo usan el escáner en vivo simulado
   setCode(CODE);
   URL.createObjectURL = vi.fn(() => 'blob:x');
   URL.revokeObjectURL = vi.fn();
@@ -127,4 +130,43 @@ test('sin conexión y código desconocido muestra su mensaje', async () => {
   renderScreen();
   await user.click(await screen.findByRole('button', { name: 'simular lectura' }));
   expect(await screen.findByText(/Sin conexión/)).toBeInTheDocument();
+});
+
+describe('código por foto (sin permisos de cámara)', () => {
+  beforeEach(async () => {
+    await patchSettings({ scanMode: undefined });
+  });
+
+  test('por defecto ofrece sacar foto al código y no abre la cámara en vivo', async () => {
+    renderScreen();
+    const input = await screen.findByLabelText('Sacar foto al código');
+    expect(input).toHaveAttribute('capture', 'environment');
+    expect(screen.queryByRole('button', { name: 'simular lectura' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Usar cámara en vivo' })).toBeInTheDocument();
+  });
+
+  test('una foto con código legible busca el producto', async () => {
+    const user = userEvent.setup();
+    vi.spyOn(engine, 'detectCodeInImage').mockResolvedValue(CODE);
+    vi.spyOn(off, 'fetchProduct').mockResolvedValue(snack);
+    renderScreen();
+    await user.upload(await screen.findByLabelText('Sacar foto al código'), new File(['x'], 'c.jpg', { type: 'image/jpeg' }));
+    expect(await screen.findByRole('dialog', { name: 'Protein+ Snack' })).toBeInTheDocument();
+  });
+
+  test('una foto sin código legible lo explica', async () => {
+    const user = userEvent.setup();
+    vi.spyOn(engine, 'detectCodeInImage').mockResolvedValue(null);
+    renderScreen();
+    await user.upload(await screen.findByLabelText('Sacar foto al código'), new File(['x'], 'c.jpg', { type: 'image/jpeg' }));
+    expect(await screen.findByText(/No pude leer el código/)).toBeInTheDocument();
+  });
+
+  test('elegir la cámara en vivo la abre y se recuerda', async () => {
+    const user = userEvent.setup();
+    renderScreen();
+    await user.click(await screen.findByRole('button', { name: 'Usar cámara en vivo' }));
+    expect(await screen.findByRole('button', { name: 'simular lectura' })).toBeInTheDocument();
+    await waitFor(async () => expect((await getSettings()).scanMode).toBe('live'));
+  });
 });
